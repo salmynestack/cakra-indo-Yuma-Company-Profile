@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { company, fullAddress } from "@/data/company";
 import { services } from "@/data/services";
+import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   const [currentYear, setCurrentYear] = useState(2026);
@@ -18,14 +19,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Kolom 1: Profil ringkas & Logo */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold-500 text-brand-950">
-                <span className="chevron-mark" aria-hidden="true" />
-              </div>
-              <span className="font-display text-lg font-bold tracking-tight text-white">
-                {company.name}
-              </span>
-            </div>
+            <Logo variant="footer" />
             <p className="text-sm leading-relaxed text-ink-300">
               {company.description}
             </p>

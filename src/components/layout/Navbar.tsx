@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { company } from "@/data/company";
 import { Button } from "@/components/ui/Button";
+import { Logo } from "@/components/ui/Logo";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -79,21 +80,10 @@ export function Navbar() {
         {/* Logo (PRD G-01) */}
         <Link
           href="/"
-          className="group flex items-center gap-3 focus-visible:outline-brand-600 rounded-sm"
+          className="group focus-visible:outline-brand-600 rounded-sm"
           aria-label={`${company.name} - Beranda`}
         >
-          {/* Chevron mark logo */}
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand-900 text-cream-50 shadow-xs transition-transform group-hover:scale-105">
-            <span className="chevron-mark scale-125" aria-hidden="true" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-display text-lg font-extrabold tracking-tight text-brand-950 leading-tight">
-              CAKRA INDO YUMA
-            </span>
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-brand-600">
-              Supplier & Interior
-            </span>
-          </div>
+          <Logo variant="navbar" />
         </Link>
 
         {/* Desktop Navigation */}

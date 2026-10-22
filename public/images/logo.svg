@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <!-- Background Disc / Shield -->
+  <defs>
+    <linearGradient id="cakraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5739" />
+      <stop offset="100%" stop-color="#5C3621" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="50%" stop-color="#D4A514" />
+      <stop offset="100%" stop-color="#B4820B" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Outer Ring (Gold Accent) -->
+  <circle cx="100" cy="100" r="92" stroke="url(#goldGrad)" stroke-width="4" fill="none" opacity="0.85" />
+
+  <!-- Base Circle (Brand Brown) -->
+  <circle cx="100" cy="100" r="84" fill="url(#cakraGrad)" filter="url(#shadow)" />
+
+  <!-- Inner Decorative Dashed Ring -->
+  <circle cx="100" cy="100" r="76" stroke="#D4A514" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0.6" />
+
+  <!-- Geometric Chevron / Cakra Rays -->
+  <!-- Top Central Chevron -->
+  <path d="M 100 36 L 124 64 L 112 64 L 100 50 L 88 64 L 76 64 Z" fill="url(#goldGrad)" />
+
+  <!-- Central Cakra Emblem (Eight-pointed sun/gear/cakra wheel) -->
+  <g transform="translate(100, 100)">
+    <!-- 8 Cakra Spokes -->
+    <path d="M -6 -48 L 6 -48 L 4 -24 L -4 -24 Z" fill="#FDFBF7" opacity="0.9" />
+    <path d="M -6 48 L 6 48 L 4 24 L -4 24 Z" fill="#FDFBF7" opacity="0.9" />
+    <path d="M -48 -6 L -48 6 L -24 4 L -24 -4 Z" fill="#FDFBF7" opacity="0.9" />
+    <path d="M 48 -6 L 48 6 L 24 4 L 24 -4 Z" fill="#FDFBF7" opacity="0.9" />
+    
+    <path d="M -34 -34 L -25 -43 L -12 -23 L -23 -12 Z" fill="#FDFBF7" opacity="0.75" />
+    <path d="M 34 34 L 25 43 L 12 23 L 23 12 Z" fill="#FDFBF7" opacity="0.75" />
+    <path d="M 34 -34 L 43 -25 L 23 -12 L 12 -23 Z" fill="#FDFBF7" opacity="0.75" />
+    <path d="M -34 34 L -43 25 L -23 12 L -12 23 Z" fill="#FDFBF7" opacity="0.75" />
+
+    <!-- Center Core Shield -->
+    <circle cx="0" cy="0" r="22" fill="#5C3621" stroke="url(#goldGrad)" stroke-width="3" />
+    
+    <!-- Central Monogram 'C' / Chevron inside core -->
+    <path d="M 0 -10 L 8 0 L 4 0 L 0 -5 L -4 0 L -8 0 Z" fill="url(#goldGrad)" />
+    <circle cx="0" cy="4" r="3" fill="#FCD34D" />
+  </g>
+
+  <!-- Bottom Base Wings / Flourish -->
+  <path d="M 52 144 Q 100 162 148 144 Q 100 152 52 144 Z" fill="url(#goldGrad)" opacity="0.9" />
+</svg>
