@@ -23,7 +23,7 @@ export function Logo({
 
   const sizeClass =
     variant === "footer"
-      ? "h-10 w-10"
+      ? "h-11 w-11"
       : variant === "mobile"
         ? "h-10 w-10"
         : "h-11 w-11";
@@ -34,7 +34,9 @@ export function Logo({
         className={cn(
           "relative flex shrink-0 items-center justify-center overflow-hidden rounded-lg transition-transform group-hover:scale-105",
           sizeClass,
-          variant === "footer" ? "bg-transparent" : "bg-brand-900/10",
+          variant === "footer"
+            ? "bg-white p-1 shadow-sm ring-1 ring-white/20"
+            : "bg-cream-50/80 p-1 border border-brand-900/10 shadow-xs",
         )}
       >
         {!hasError ? (
@@ -43,7 +45,7 @@ export function Logo({
             alt="Logo PT Cakra Indo Yuma"
             width={48}
             height={48}
-            className="h-full w-full object-contain p-0.5"
+            className="h-full w-full object-contain"
             onError={() => setHasError(true)}
             priority
           />

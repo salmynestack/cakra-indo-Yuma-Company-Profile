@@ -193,10 +193,8 @@ export function Navbar() {
           >
             <div className="space-y-6">
               <div className="border-b border-ink-200 pb-4">
-                <p className="text-xs font-bold uppercase tracking-wider text-brand-700">
-                  Navigasi Situs
-                </p>
-                <p className="text-sm text-ink-500">{company.tagline}</p>
+                <Logo variant="mobile" />
+                <p className="mt-2 text-xs text-ink-500">{company.tagline}</p>
               </div>
 
               <nav className="flex flex-col space-y-1">

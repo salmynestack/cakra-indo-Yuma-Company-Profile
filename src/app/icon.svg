@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 345" fill="none">
+  <!-- PT Cakra Indo Yuma Official Emblem Logo -->
+  <!-- Outer Brown Geometric "C" Shape -->
+  <path
+    d="M 103 6 
+       L 289 6 
+       L 243 91 
+       L 148 91 
+       L 103 172 
+       L 148 251 
+       L 241 251 
+       L 288 338 
+       L 101 338 
+       L 7 172 
+       Z"
+    fill="#7F5432"
+  />
+
+  <!-- Inner Gold Chevron Arrow Shape -->
+  <path
+    d="M 243 91 
+       L 332 91 
+       L 286 172 
+       L 332 251 
+       L 241 251 
+       L 190 172 
+       Z"
+    fill="#D2A114"
+  />
+</svg>
