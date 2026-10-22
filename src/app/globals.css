@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens (PRD 6.2 & 10.6).
+ * Warna diturunkan dari logo PT Cakra Indo Yuma. Ganti nilai di sini bila
+ * file logo resmi sudah tersedia; seluruh komponen membaca token ini.
+ *
+ * - brand  : cokelat logo (#7A4E33 = brand-600), dipakai untuk tombol & heading.
+ * - gold   : emas logo, HANYA untuk ikon, garis, dan latar dengan teks gelap
+ *            (kontras emas di atas putih < 4.5:1).
+ * - ink    : netral hangat untuk teks dan border.
+ * - cream  : permukaan hangat dari Company Profile 2025.
+ */
+@theme {
+  --color-brand-50: #faf5f1;
+  --color-brand-100: #f2e6dc;
+  --color-brand-200: #e3cbb8;
+  --color-brand-300: #cfa88c;
+  --color-brand-400: #b07f5f;
+  --color-brand-500: #93623f;
+  --color-brand-600: #7a4e33;
+  --color-brand-700: #643f29;
+  --color-brand-800: #4e3120;
+  --color-brand-900: #3a2418;
+  --color-brand-950: #24160e;
+
+  --color-gold-100: #fbf1cc;
+  --color-gold-200: #f5e199;
+  --color-gold-300: #ebcb5c;
+  --color-gold-400: #e0b733;
+  --color-gold-500: #d4a514;
+  --color-gold-600: #b08710;
+  --color-gold-700: #7d600b;
+
+  --color-cream-50: #fdfaf4;
+  --color-cream-100: #fbf4e6;
+  --color-cream-200: #f8e8cc;
+
+  --color-ink-50: #faf9f7;
+  --color-ink-100: #f2f0ec;
+  --color-ink-200: #e4e1db;
+  --color-ink-300: #cbc7bf;
+  --color-ink-400: #a29d94;
+  --color-ink-500: #736e66;
+  --color-ink-600: #5e5f63;
+  --color-ink-700: #44403c;
+  --color-ink-800: #292524;
+  --color-ink-900: #1c1917;
+
+  --color-success-600: #1f7a4d;
+  --color-success-50: #ecf8f1;
+  --color-error-600: #b42318;
+  --color-error-50: #fef3f2;
+  --color-warning-700: #8a5a00;
+  --color-warning-50: #fff8e6;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --radius-card: 0.75rem;
+  --radius-control: 0.5rem;
+
+  --container-site: 80rem;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Ruang untuk navbar sticky saat lompat ke anchor (#slug). */
+    scroll-padding-top: 6rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-cream-50 font-sans text-base leading-[1.6] text-ink-800 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-balance text-brand-950;
+    letter-spacing: -0.015em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand-600);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-gold-200);
+    color: var(--color-brand-950);
+  }
+
+  dialog::backdrop {
+    background: rgb(36 22 14 / 0.6);
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-(--container-site) px-5 sm:px-8 lg:px-10;
+  }
+
+  /*
+   * Motif chevron (PRD 10.6): diambil dari bentuk logo dan pola segitiga di
+   * Company Profile. Dipakai sebagai satu-satunya motif dekoratif situs.
+   */
+  .chevron-mark {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    background: linear-gradient(135deg, var(--color-gold-500) 50%, var(--color-brand-600) 50%);
+    clip-path: polygon(0 0, 55% 50%, 0 100%, 40% 100%, 95% 50%, 40% 0);
+  }
+
+  .chevron-band {
+    background-image:
+      linear-gradient(135deg, transparent 75%, rgb(212 165 20 / 0.18) 75%),
+      linear-gradient(225deg, transparent 75%, rgb(212 165 20 / 0.18) 75%);
+    background-size: 28px 28px;
+    background-position: 0 0, 14px 0;
+  }
+
+  .section-cut-top {
+    clip-path: polygon(0 2.5rem, 50% 0, 100% 2.5rem, 100% 100%, 0 100%);
+  }
+
+  .prose-site p + p {
+    @apply mt-4;
+  }
+}
+
+/* Utilitas aksesibilitas */
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
