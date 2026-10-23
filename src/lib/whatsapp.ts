@@ -24,15 +24,14 @@ export function formatContactMessage(data: ContactFormData): string {
 }
 
 export function buildWhatsAppUrl(message: string): string {
-  const rawNumber = company.whatsapp || "6282134567890"; // nomor default bila env belum diisi
+  const rawNumber = company.whatsapp || "6281227127472";
   const cleanNumber = rawNumber.replace(/[^0-9]/g, "");
   return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
 }
 
 export function buildMailtoUrl(data: ContactFormData): string {
-  const subject = `[Inquiry Web] ${categoryLabels[data.kategori] ?? data.kategori} - ${data.nama}${
-    data.perusahaan ? ` (${data.perusahaan})` : ""
-  }`;
+  const subject = `[Inquiry Web] ${categoryLabels[data.kategori] ?? data.kategori} - ${data.nama}${data.perusahaan ? ` (${data.perusahaan})` : ""
+    }`;
   const body = formatContactMessage(data).replace(/\*/g, ""); // Hilangkan format bintang WhatsApp untuk email
   return `mailto:${company.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
     body,

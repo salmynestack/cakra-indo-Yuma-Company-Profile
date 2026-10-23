@@ -49,6 +49,12 @@ export type Project = {
   clientType: "Pemerintah" | "BUMN" | "Swasta" | "Pendidikan";
   location?: string;
   year?: number;
+  /** Jenis kegiatan resmi dari Company Profile (misal: EVENT ORGANIZER, PENGADAAN BARANG, KONSTRUKSI, INTERIOR) */
+  activityType?: string;
+  /** Nilai kontrak tertera pada Company Profile (misal: "Rp 1.018.441.441") */
+  contractValue?: string;
+  /** Nilai kontrak numerik untuk keperluan sorting */
+  contractValueNumber?: number;
   summary: string;
   challenge?: string;
   solution?: string;

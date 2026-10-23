@@ -127,10 +127,10 @@ export const timeline: TimelineItem[] = [
     description: "Akta Perubahan No. 97 disahkan untuk memperluas bidang usaha perusahaan.",
   },
   {
-    date: "2025",
-    title: "30 project selesai",
+    date: "2025 sampai 2026",
+    title: "49 project selesai",
     description:
-      "Tercatat 30 project selesai untuk instansi pemerintah, BUMN, dan swasta, termasuk melalui brand Alterior.",
+      "Tercatat 49 project resmi selesai untuk instansi pemerintah, BUMN, dan perguruan tinggi negeri, termasuk melalui brand Alterior.",
   },
 ];
 
@@ -145,24 +145,29 @@ export const legalItems: LegalItem[] = [
   { label: "Izin usaha (SIUP)", value: "Terbit 17 Juni 2020" },
 ];
 
-/** Angka pencapaian (H-04). Semua angka bersumber dari Company Profile 2025. */
+/** Angka pencapaian (H-04). Semua angka bersumber dari Company Profile 2026. */
 export const stats: Stat[] = [
-  { value: 30, label: "project selesai sejak 2020" },
+  { value: 49, label: "project selesai (2020 - 2026)" },
   { value: 2020, label: "tahun berdiri di Cilacap", raw: true },
   { value: 6, label: "lini layanan pengadaan" },
-  { value: 8, label: "kota lokasi project" },
+  { value: 12, label: "kota & kabupaten lokasi project" },
 ];
 
-/** Kota lokasi project dari Company Profile (PRD 10.3). */
+/** Kota lokasi project dari Company Profile (PRD 10.3 & Compro 2026). */
 export const projectCities = [
   "Cilacap",
   "Purwokerto",
-  "Sokaraja",
-  "Pemalang",
-  "Indramayu",
-  "Surabaya",
-  "Jakarta",
   "Semarang",
+  "Jakarta",
+  "Bandung",
+  "Yogyakarta",
+  "Tegal",
+  "Pati",
+  "Grobogan",
+  "Bantul",
+  "Sleman",
+  "Tuban",
+  "Aceh Tamiang",
 ];
 
 /**
