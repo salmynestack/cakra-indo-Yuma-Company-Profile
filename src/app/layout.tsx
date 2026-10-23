@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   keywords: [
     "PT Cakra Indo Yuma",
     "Supplier Mebel Cilacap",
-    "Artalana Furniture",
+    "Alterior Furniture",
     "Interior Kantor Cilacap",
     "Pengadaan Barang Instansi",
     "Supplier Restoran",

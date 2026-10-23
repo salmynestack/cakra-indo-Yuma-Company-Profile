@@ -34,8 +34,8 @@ export type Service = {
   description: string;
   scope: string[];
   benefits: string[];
-  /** Brand Artalana tampil sebagai sub-brand pada layanan tertentu (PRD 10.7). */
-  artalana?: boolean;
+  /** Brand Alterior tampil sebagai sub-brand pada layanan tertentu (PRD 10.7). */
+  alterior?: boolean;
   featured?: boolean;
 };
 

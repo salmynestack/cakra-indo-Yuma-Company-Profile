@@ -9,7 +9,7 @@ export const services: Service[] = [
     summary:
       "Pengadaan meja rapat, kursi kantor ergonomis, lemari arsip, dan bangku belajar untuk instansi, sekolah, dan rumah sakit.",
     description:
-      "Melalui brand Artalana, kami memproduksi dan memasok aneka furniture kayu solid, blok kayu lapis, serta logam. Kami melayani kebutuhan perkantoran instansi pemerintah, BUMN, ruang kelas sekolah, hingga fasilitas medis di rumah sakit dengan spesifikasi yang disesuaikan.",
+      "Melalui brand Alterior, kami memproduksi dan memasok aneka furniture kayu solid, blok kayu lapis, serta logam. Kami melayani kebutuhan perkantoran instansi pemerintah, BUMN, ruang kelas sekolah, hingga fasilitas medis di rumah sakit dengan spesifikasi yang disesuaikan.",
     scope: [
       "Meja rapat besar, meja kerja staf, dan meja resepsionis custom",
       "Kursi kantor ergonomis, kursi lipat kuliah, dan kursi tunggu",
@@ -23,7 +23,7 @@ export const services: Service[] = [
       "Kapasitas produksi andal untuk proyek pengadaan skala menengah hingga besar",
       "Garansi struktur dan layanan purnajual langsung dari produsen",
     ],
-    artalana: true,
+    alterior: true,
     featured: true,
   },
   {
@@ -48,7 +48,7 @@ export const services: Service[] = [
       "Pengerjaan tepat waktu sesuai jadwal operasional instansi",
       "Konsultasi tata ruang langsung di lokasi proyek",
     ],
-    artalana: true,
+    alterior: true,
     featured: true,
   },
   {
@@ -73,7 +73,7 @@ export const services: Service[] = [
       "Produk asli dengan garansi resmi distributor",
       "Administrasi faktur dan pajak lengkap untuk pelaporan SPK",
     ],
-    artalana: true,
+    alterior: true,
     featured: true,
   },
   {

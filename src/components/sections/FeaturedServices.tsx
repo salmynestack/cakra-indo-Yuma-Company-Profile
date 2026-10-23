@@ -36,9 +36,9 @@ export function FeaturedServices() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
                     <span className="chevron-mark" aria-hidden="true" />
                   </div>
-                  {service.artalana && (
+                  {service.alterior && (
                     <Badge variant="gold" size="sm">
-                      Brand Artalana
+                      Brand Alterior
                     </Badge>
                   )}
                 </div>

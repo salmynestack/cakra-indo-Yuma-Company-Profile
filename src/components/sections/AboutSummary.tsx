@@ -35,7 +35,7 @@ export function AboutSummary() {
 
             <div className="space-y-4 text-base text-ink-700 leading-relaxed">
               <p>
-                {company.description} Melalui brand <strong className="text-brand-900">Artalana</strong>,
+                {company.description} Melalui brand <strong className="text-brand-900">Alterior</strong>,
                 kami mengkhususkan diri dalam pengadaan perlengkapan kantor, perancangan mebel custom,
                 dan renovasi ruang kerja yang fungsional dan tahan lama.
               </p>

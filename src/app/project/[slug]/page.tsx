@@ -199,7 +199,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 <div>
                   <span className="text-xs text-ink-500 block">Pelaksana Teknis</span>
                   <span className="font-semibold text-brand-950">
-                    PT Cakra Indo Yuma (Brand Artalana)
+                    PT Cakra Indo Yuma (Brand Alterior)
                   </span>
                 </div>
               </div>

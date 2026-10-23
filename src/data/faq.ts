@@ -9,7 +9,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Apakah mebel dan interior dapat disesuaikan (custom) dengan ukuran ruangan kami?",
     answer:
-      "Tentu. Melalui brand Artalana, kami memproduksi mebel dan pengerjaan interior mengikuti denah serta spesifikasi teknis (spesifikasi ukuran, jenis kayu, warna laminasi HPL, atau finishing politur) yang dibutuhkan instansi atau kantor Anda.",
+      "Tentu. Melalui brand Alterior, kami memproduksi mebel dan pengerjaan interior mengikuti denah serta spesifikasi teknis (spesifikasi ukuran, jenis kayu, warna laminasi HPL, atau finishing politur) yang dibutuhkan instansi atau kantor Anda.",
   },
   {
     question: "Daerah mana saja yang masuk dalam jangkauan pengiriman dan pengerjaan?",

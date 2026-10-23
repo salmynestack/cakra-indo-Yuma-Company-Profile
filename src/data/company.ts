@@ -20,8 +20,8 @@ export const company = {
   tagline: "Supplier mebel, interior, ATK, dan kebutuhan instansi dari Cilacap",
   description:
     "PT Cakra Indo Yuma adalah perusahaan supplier yang berdiri di Cilacap, Jawa Tengah, sejak Maret 2020. Kami memasok kebutuhan restoran serta instansi pemerintah dan swasta, mulai dari mebel, interior, alat tulis kantor, hingga penyelenggaraan acara.",
-  artalana:
-    "Artalana adalah brand kami untuk sektor supplier instansi: alat tulis, furniture, interior, dan eksterior.",
+  alterior:
+    "Alterior adalah brand kami untuk sektor supplier instansi: alat tulis, furniture, interior, dan eksterior.",
 
   address: {
     street: "Jl. Perintis Kemerdekaan No. 51",
@@ -130,7 +130,7 @@ export const timeline: TimelineItem[] = [
     date: "2025",
     title: "30 project selesai",
     description:
-      "Tercatat 30 project selesai untuk instansi pemerintah, BUMN, dan swasta, termasuk melalui brand Artalana.",
+      "Tercatat 30 project selesai untuk instansi pemerintah, BUMN, dan swasta, termasuk melalui brand Alterior.",
   },
 ];
 

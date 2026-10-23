@@ -16,14 +16,14 @@ import type { ServiceSlug } from "@/types";
 export const metadata: Metadata = {
   title: "Katalog Layanan Pengadaan & Interior | PT Cakra Indo Yuma",
   description:
-    "Katalog 6 lini layanan pengadaan PT Cakra Indo Yuma: Mebel dan Furniture Artalana, Interior & Eksterior, ATK & Elektronik, Event Organizer, Supplier Restoran, dan Pengadaan Barang Umum.",
+    "Katalog 6 lini layanan pengadaan PT Cakra Indo Yuma: Mebel dan Furniture Alterior, Interior & Eksterior, ATK & Elektronik, Event Organizer, Supplier Restoran, dan Pengadaan Barang Umum.",
 };
 
 // Foto dokumentasi asli per jenis layanan. Layanan tanpa entri tampil tanpa foto.
 const serviceImages: Partial<Record<ServiceSlug, { src: string; alt: string }>> = {
   "mebel-furniture": {
     src: "/images/workshop-mebel-kayu.jpg",
-    alt: "Pemeriksaan mutu kursi dan meja kayu jati di workshop Artalana",
+    alt: "Pemeriksaan mutu kursi dan meja kayu jati di workshop Alterior",
   },
   "interior-eksterior": {
     src: "/images/bahan-baku-kayu-jati.jpg",
@@ -88,9 +88,9 @@ export default function LayananPage() {
                           <span className="font-ui text-xs font-bold text-brand-700 uppercase tracking-wider">
                             Layanan 0{index + 1}
                           </span>
-                          {service.artalana && (
+                          {service.alterior && (
                             <Badge variant="gold" size="sm">
-                              Brand Artalana
+                              Brand Alterior
                             </Badge>
                           )}
                         </div>

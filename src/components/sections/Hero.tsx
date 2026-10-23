@@ -60,7 +60,7 @@ export function Hero() {
               </div>
               <div>
                 <p className="font-hero text-2xl leading-none tracking-wide text-brand-950 sm:text-3xl">
-                  Brand Artalana
+                  Brand Alterior
                 </p>
                 <p className="mt-1 text-ink-500 text-xs">Mebel &amp; interior dinas</p>
               </div>

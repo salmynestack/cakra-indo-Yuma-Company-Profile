@@ -491,7 +491,7 @@ Company Profile 2025 (Compro_CIY.pdf) menjawab sebagian besar input. Rincian dat
 
 | # | Input | Status | Catatan |
 |---|---|---|---|
-| 1 | Bidang usaha dan layanan | Sebagian | Supplier restoran dan instansi, brand Artalana. Daftar layanan usulan (10.2) perlu disetujui; deskripsi, cakupan, dan manfaat per layanan belum ada |
+| 1 | Bidang usaha dan layanan | Sebagian | Supplier restoran dan instansi, brand Alterior. Daftar layanan usulan (10.2) perlu disetujui; deskripsi, cakupan, dan manfaat per layanan belum ada |
 | 2 | Logo dan brand guideline | Sebagian | Logo ada di PDF; butuh file asli (SVG/PNG) serta warna dan font resmi |
 | 3 | Profil, visi, misi | Ada | Visi, misi, dan profil singkat lengkap |
 | 4 | Sejarah, nilai perusahaan, tim, foto | Belum | Hanya tahun berdiri (2020) yang tersedia |
@@ -507,7 +507,7 @@ Sumber: Compro_CIY.pdf. Bagian ini menjadi acuan konten awal website dan menggan
 
 ### 10.1 Profil Singkat
 
-- **Bidang usaha:** supplier restoran serta instansi pemerintah dan swasta. Brand Artalana bergerak di sektor supplier instansi (alat tulis, furniture, interior, eksterior).
+- **Bidang usaha:** supplier restoran serta instansi pemerintah dan swasta. Brand Alterior bergerak di sektor supplier instansi (alat tulis, furniture, interior, eksterior).
 - **Berdiri:** Maret 2020, berkedudukan di Kabupaten Cilacap, Jawa Tengah.
 - **Visi:** menjadi korporasi global terkemuka melalui diversifikasi dan integrasi usaha untuk memberi peran pada masa depan masyarakat Indonesia yang lebih baik.
 - **Misi (5 poin):** kerja sama bisnis yang baik dan profesional; produk dan layanan berkualitas tinggi secara berkesinambungan; kinerja efisien dan efektif; pengembangan karyawan yang kompeten; manfaat optimum bagi pemegang saham, karyawan, dan masyarakat.
@@ -519,9 +519,9 @@ Diturunkan dari rekam jejak project dan bidang usaha di profil; perlu disetujui 
 
 | Slug | Layanan | Dasar | Contoh klien |
 |---|---|---|---|
-| mebel-furniture | Mebel dan Furniture | Brand Artalana; 17 project | PT Kilang Pertamina Internasional, RSUD Cilacap, SMA N 1 Cilacap |
-| interior-eksterior | Interior dan Eksterior | Artalana; KBLI dekorasi interior dan eksterior | Universitas Jenderal Soedirman, Politeknik Negeri Cilacap, CV Jembar Artha |
-| atk-kertas-elektronik | ATK, Kertas, dan Elektronik | Artalana (alat tulis); KBLI perdagangan | PT PLN UP3 Indramayu, PT KPI RU IV |
+| mebel-furniture | Mebel dan Furniture | Brand Alterior; 17 project | PT Kilang Pertamina Internasional, RSUD Cilacap, SMA N 1 Cilacap |
+| interior-eksterior | Interior dan Eksterior | Alterior; KBLI dekorasi interior dan eksterior | Universitas Jenderal Soedirman, Politeknik Negeri Cilacap, CV Jembar Artha |
+| atk-kertas-elektronik | ATK, Kertas, dan Elektronik | Alterior (alat tulis); KBLI perdagangan | PT PLN UP3 Indramayu, PT KPI RU IV |
 | event-organizer | Event Organizer dan Rapat | KBLI 82302 (special event) dan 82301 (MICE) | PT Pertamina Patra Niaga MOR IV, PT Pertamina (Persero) |
 | supplier-restoran | Supplier Restoran dan F&B | Bidang usaha utama | SLCOM Purwokerto, PT Rocket Chicken Indonesia |
 | pengadaan-umum | Pengadaan Barang Instansi dan Industri | KBLI perdagangan besar berbagai barang | PT Pelindo, PT Pertamina (Surabaya), PT Putra Sabar Mandiri |
@@ -570,7 +570,7 @@ Fitur tambahan **T-09 (P1):** tombol Unduh Company Profile berupa PDF versi publ
 
 ### 10.6 Identitas Visual dari Dokumen
 
-- **Logo:** chevron cokelat dan emas dengan wordmark PT. CAKRA INDO YUMA berwarna abu gelap. Sampul belakang profil menampilkan ikon oranye yang berbeda; konfirmasi apakah itu logo Artalana atau versi lain.
+- **Logo:** chevron cokelat dan emas dengan wordmark PT. CAKRA INDO YUMA berwarna abu gelap. Sampul belakang profil menampilkan ikon oranye yang berbeda; konfirmasi apakah itu logo Alterior atau versi lain.
 - **Palet (perkiraan visual dari PDF; ambil nilai resmi dari file logo):** cokelat sekitar #7A4E33, emas sekitar #D4A514, oranye-merah sekitar #F05A3B, abu arang sekitar #5E5F63, krem sekitar #F8E8CC.
 - **Motif:** pola segitiga dan chevron pada profil dipakai sebagai motif hero dan pembatas section agar selaras dengan materi cetak.
 - **Usulan peran warna:** cokelat sebagai primary (heading dan tombol), emas dan oranye-merah sebagai aksen. Emas dan oranye-merah tidak memenuhi kontras 4,5:1 untuk teks kecil di atas putih, jadi dipakai untuk ikon, garis, dan latar dengan teks gelap. Pilihan primary (cokelat logo atau oranye-merah profil) perlu keputusan perusahaan.
@@ -581,5 +581,5 @@ Fitur tambahan **T-09 (P1):** tombol Unduh Company Profile berupa PDF versi publ
 - **Project:** filter memakai enam kategori pada 10.3; P-06 berlaku untuk project yang punya foto.
 - **H-07:** nama klien tanpa logo sampai izin tersedia.
 - **T-06 dan T-09:** ringkasan legalitas saja, ditambah unduhan profil versi publik.
-- **Brand Artalana:** tampil sebagai sub-brand pada layanan Mebel, Interior, dan ATK; perlu konfirmasi apakah punya logo atau situs sendiri.
+- **Brand Alterior:** tampil sebagai sub-brand pada layanan Mebel, Interior, dan ATK; perlu konfirmasi apakah punya logo atau situs sendiri.
 - **Konten asli:** ejaan dirapikan dan disetujui perusahaan sebelum tayang.

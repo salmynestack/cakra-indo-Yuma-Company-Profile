@@ -8,7 +8,7 @@ const strengths = [
       "Memiliki Akta Pendirian resmi, SK Kemenkumham, NIB (0220208341324), dan izin usaha (SIUP). Siap untuk verifikasi tender, lelang, maupun Surat Perintah Kerja (SPK) instansi pemerintah dan BUMN.",
   },
   {
-    title: "Produksi Mebel Custom (Brand Artalana)",
+    title: "Produksi Mebel Custom (Brand Alterior)",
     description:
       "Didukung tenaga perajin kayu terampil yang mampu memproduksi meja rapat, workstation, dan interior dinding sesuai ukuran presisi ruangan dan spesifikasi material pemesan.",
   },

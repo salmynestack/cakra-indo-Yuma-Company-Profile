@@ -54,7 +54,7 @@ export default function TentangKamiPage() {
                 kebutuhan operasional instansi pemerintah maupun swasta.
               </p>
               <p>
-                Melalui lini brand <strong>Artalana</strong>, kami memadukan
+                Melalui lini brand <strong>Alterior</strong>, kami memadukan
                 keahlian perajin kayu lokal dan manajemen rantai pasok modern untuk
                 menghasilkan produk furnitur instansi yang kokoh, rapi, dan sesuai
                 anggaran proyek.

@@ -81,7 +81,7 @@ export const projects: Project[] = [
     gallery: [
       {
         src: "/images/projects/produksi-mebel-sekolah.jpg",
-        alt: "Pabrikasi dan penataan set meja kursi kelas di workshop kayu Artalana",
+        alt: "Pabrikasi dan penataan set meja kursi kelas di workshop kayu Alterior",
       },
       {
         src: "/images/workshop-mebel-kayu.jpg",
