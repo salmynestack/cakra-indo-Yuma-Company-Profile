@@ -32,7 +32,7 @@ export function SectionHeading({
       {kicker && (
         <div
           className={cn(
-            "mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700",
+            "mb-3 inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-wider text-brand-700",
             isCenter && "justify-center",
           )}
         >
@@ -43,12 +43,12 @@ export function SectionHeading({
 
       <Tag
         className={cn(
-          "font-display font-extrabold text-brand-950",
+          "text-brand-950",
           Tag === "h1"
-            ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+            ? "font-hero font-normal tracking-wide leading-[0.95] text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl"
             : Tag === "h2"
-              ? "text-2xl sm:text-3xl md:text-4xl"
-              : "text-xl sm:text-2xl",
+              ? "font-display font-extrabold text-2xl sm:text-3xl md:text-4xl"
+              : "font-display font-extrabold text-xl sm:text-2xl",
         )}
       >
         {title}

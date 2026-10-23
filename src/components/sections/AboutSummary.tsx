@@ -13,15 +13,15 @@ export function AboutSummary() {
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative overflow-hidden rounded-card border border-ink-200 shadow-md aspect-4/3">
               <Image
-                src="/images/gudang.jpg"
-                alt="Gudang pengadaan dan perakitan mebel PT Cakra Indo Yuma"
+                src="/images/projects/serah-terima-barang-pertamina.jpg"
+                alt="Petugas PT Cakra Indo Yuma mencocokkan dokumen serah terima dengan kardus barang pesanan instansi"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
             </div>
-            <p className="mt-2 text-right text-[11px] text-ink-500 italic">
-              Aktivitas pergudangan dan logistik penyiapan pasokan instansi
+            <p className="mt-2 text-right text-xs text-ink-500 italic">
+              Pengecekan dokumen serah terima barang di lokasi klien
             </p>
           </div>
 
@@ -40,10 +40,10 @@ export function AboutSummary() {
                 dan renovasi ruang kerja yang fungsional dan tahan lama.
               </p>
               <div className="rounded-control bg-cream-100 p-4 border-l-4 border-gold-500">
-                <p className="text-xs font-bold uppercase tracking-wider text-brand-900">
+                <p className="font-ui text-xs font-bold uppercase tracking-wider text-brand-900">
                   Visi Perusahaan:
                 </p>
-                <p className="mt-1 text-sm italic text-ink-800">
+                <p className="mt-1 font-serif text-base italic text-ink-800">
                   &ldquo;{vision}&rdquo;
                 </p>
               </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { faqs } from "@/data/faq";
 import { services } from "@/data/services";
@@ -10,11 +11,32 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServiceSubNav } from "./ServiceSubNav";
+import type { ServiceSlug } from "@/types";
 
 export const metadata: Metadata = {
   title: "Katalog Layanan Pengadaan & Interior | PT Cakra Indo Yuma",
   description:
     "Katalog 6 lini layanan pengadaan PT Cakra Indo Yuma: Mebel dan Furniture Artalana, Interior & Eksterior, ATK & Elektronik, Event Organizer, Supplier Restoran, dan Pengadaan Barang Umum.",
+};
+
+// Foto dokumentasi asli per jenis layanan. Layanan tanpa entri tampil tanpa foto.
+const serviceImages: Partial<Record<ServiceSlug, { src: string; alt: string }>> = {
+  "mebel-furniture": {
+    src: "/images/workshop-mebel-kayu.jpg",
+    alt: "Pemeriksaan mutu kursi dan meja kayu jati di workshop Artalana",
+  },
+  "interior-eksterior": {
+    src: "/images/bahan-baku-kayu-jati.jpg",
+    alt: "Bahan baku kayu jati untuk panel dan elemen interior",
+  },
+  "atk-kertas-elektronik": {
+    src: "/images/projects/serah-terima-barang-pertamina.jpg",
+    alt: "Pengecekan dokumen serah terima kardus ATK dan elektronik di lokasi klien",
+  },
+  "pengadaan-umum": {
+    src: "/images/projects/pengiriman-pertamina-cilacap.jpg",
+    alt: "Truk pengiriman barang pengadaan di area kantor Pertamina Cilacap",
+  },
 };
 
 export default function LayananPage() {
@@ -63,7 +85,7 @@ export default function LayananPage() {
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="text-xs font-bold text-brand-700 uppercase tracking-wider">
+                          <span className="font-ui text-xs font-bold text-brand-700 uppercase tracking-wider">
                             Layanan 0{index + 1}
                           </span>
                           {service.artalana && (
@@ -97,10 +119,37 @@ export default function LayananPage() {
                     </div>
                   </div>
 
-                  {/* Deskripsi */}
-                  <p className="text-base sm:text-lg text-ink-700 leading-relaxed">
-                    {service.description}
-                  </p>
+                  {/* Deskripsi + foto dokumentasi */}
+                  {(() => {
+                    const image = serviceImages[service.slug];
+                    if (!image) {
+                      return (
+                        <p className="text-base sm:text-lg text-ink-700 leading-relaxed">
+                          {service.description}
+                        </p>
+                      );
+                    }
+                    return (
+                      <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-5 md:gap-8">
+                        <p className="text-base sm:text-lg text-ink-700 leading-relaxed md:col-span-3">
+                          {service.description}
+                        </p>
+                        <div className="relative aspect-16/10 overflow-hidden rounded-card border border-ink-200 shadow-sm md:col-span-2">
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 40vw"
+                            className="object-cover"
+                          />
+                          <span
+                            className="absolute inset-x-0 bottom-0 h-1 bg-gold-500"
+                            aria-hidden="true"
+                          />
+                        </div>
+                      </div>
+                    );
+                  })()}
 
                   {/* 2 Kolom: Cakupan & Manfaat (PRD L-02) */}
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

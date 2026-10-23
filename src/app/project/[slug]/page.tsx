@@ -94,7 +94,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </Badge>
           </div>
 
-          <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-950 max-w-4xl">
+          <h1 className="font-hero font-normal tracking-wide leading-[0.95] text-4xl sm:text-5xl lg:text-6xl text-brand-950 max-w-4xl">
             {project.title}
           </h1>
 

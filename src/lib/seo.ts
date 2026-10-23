@@ -1,4 +1,4 @@
-import { company, fullAddress, siteUrl } from "@/data/company";
+import { company, siteUrl } from "@/data/company";
 
 export function getOrganizationSchema() {
   return {
@@ -7,7 +7,7 @@ export function getOrganizationSchema() {
     name: company.name,
     alternateName: company.shortName,
     url: siteUrl,
-    logo: `${siteUrl}/images/hero-ruang-rapat.jpg`,
+    logo: `${siteUrl}/images/logo.png`,
     description: company.description,
     address: {
       "@type": "PostalAddress",
@@ -32,7 +32,7 @@ export function getLocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: company.name,
-    image: `${siteUrl}/images/hero-ruang-rapat.jpg`,
+    image: `${siteUrl}/images/workshop-mebel-kayu.jpg`,
     "@id": `${siteUrl}#business`,
     url: siteUrl,
     telephone: company.phoneHref,

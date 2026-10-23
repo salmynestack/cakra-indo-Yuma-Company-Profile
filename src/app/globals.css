@@ -2,50 +2,51 @@
 
 /*
  * Design tokens (PRD 6.2 & 10.6).
- * Warna diturunkan dari logo PT Cakra Indo Yuma. Ganti nilai di sini bila
- * file logo resmi sudah tersedia; seluruh komponen membaca token ini.
+ * Palet resmi: #FFFFFF, #E5E5E5, #FCA311, #14213D, #000000.
+ * Seluruh komponen membaca token ini, jadi ubah warna cukup di sini.
  *
- * - brand  : cokelat logo (#7A4E33 = brand-600), dipakai untuk tombol & heading.
- * - gold   : emas logo, HANYA untuk ikon, garis, dan latar dengan teks gelap
- *            (kontras emas di atas putih < 4.5:1).
- * - ink    : netral hangat untuk teks dan border.
- * - cream  : permukaan hangat dari Company Profile 2025.
+ * - brand  : navy #14213D (brand-600 = tombol, brand-950 = heading & latar gelap).
+ * - gold   : oranye #FCA311 (gold-500). HANYA untuk ikon, garis, dan latar
+ *            dengan teks gelap (kontras oranye di atas putih < 4.5:1).
+ * - ink    : abu netral menuju hitam #000000 untuk teks dan border.
+ * - cream  : permukaan abu terang, berujung di #E5E5E5.
  */
 @theme {
-  --color-brand-50: #faf5f1;
-  --color-brand-100: #f2e6dc;
-  --color-brand-200: #e3cbb8;
-  --color-brand-300: #cfa88c;
-  --color-brand-400: #b07f5f;
-  --color-brand-500: #96653e;
-  --color-brand-600: #7f5432;
-  --color-brand-700: #674227;
-  --color-brand-800: #50331e;
-  --color-brand-900: #3a2416;
-  --color-brand-950: #24160e;
+  --color-brand-50: #f1f3f8;
+  --color-brand-100: #e0e5ee;
+  --color-brand-200: #c2cadb;
+  --color-brand-300: #94a2bd;
+  --color-brand-400: #66789c;
+  --color-brand-500: #42557d;
+  --color-brand-600: #14213d;
+  --color-brand-700: #2b3f6b;
+  --color-brand-800: #22345a;
+  --color-brand-900: #1b2b4d;
+  --color-brand-950: #14213d;
 
-  --color-gold-100: #fbf1cc;
-  --color-gold-200: #f5e199;
-  --color-gold-300: #ebcb5c;
-  --color-gold-400: #e0b733;
-  --color-gold-500: #d2a114;
-  --color-gold-600: #b08710;
-  --color-gold-700: #7d600b;
+  --color-gold-100: #fff1d6;
+  --color-gold-200: #fee0a6;
+  --color-gold-300: #fdc866;
+  --color-gold-400: #fcb43a;
+  --color-gold-500: #fca311;
+  --color-gold-600: #e08e00;
+  --color-gold-700: #8f5800;
 
-  --color-cream-50: #fdfaf4;
-  --color-cream-100: #fbf4e6;
-  --color-cream-200: #f8e8cc;
+  --color-cream-50: #f5f5f5;
+  --color-cream-100: #ededed;
+  --color-cream-200: #e5e5e5;
 
-  --color-ink-50: #faf9f7;
-  --color-ink-100: #f2f0ec;
-  --color-ink-200: #e4e1db;
-  --color-ink-300: #cbc7bf;
-  --color-ink-400: #a29d94;
-  --color-ink-500: #736e66;
-  --color-ink-600: #5e5f63;
-  --color-ink-700: #44403c;
-  --color-ink-800: #292524;
-  --color-ink-900: #1c1917;
+  --color-ink-50: #fafafa;
+  --color-ink-100: #f2f2f2;
+  --color-ink-200: #e5e5e5;
+  --color-ink-300: #d1d1d1;
+  --color-ink-400: #a3a3a3;
+  --color-ink-500: #696969;
+  --color-ink-600: #525252;
+  --color-ink-700: #3d3d3d;
+  --color-ink-800: #262626;
+  --color-ink-900: #141414;
+  --color-ink-950: #000000;
 
   --color-success-600: #1f7a4d;
   --color-success-50: #ecf8f1;
@@ -54,8 +55,19 @@
   --color-warning-700: #8a5a00;
   --color-warning-50: #fff8e6;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, sans-serif;
+  /*
+   * Peran tipografi:
+   * - sans    : Source Sans Pro (Source Sans 3) untuk teks paragraf.
+   * - display : Montserrat untuk heading h2-h4, tombol, dan badge.
+   * - hero    : Bebas Neue untuk judul h1 dan angka statistik.
+   * - serif   : Lora untuk kutipan (visi, komitmen).
+   * - ui      : Oxygen untuk navigasi, label kecil, dan kicker.
+   */
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), var(--font-source-sans), ui-sans-serif, sans-serif;
+  --font-hero: var(--font-bebas), var(--font-montserrat), Impact, sans-serif;
+  --font-serif: var(--font-lora), Georgia, ui-serif, serif;
+  --font-ui: var(--font-oxygen), var(--font-source-sans), ui-sans-serif, sans-serif;
 
   --radius-card: 0.75rem;
   --radius-control: 0.5rem;
@@ -114,7 +126,7 @@
   }
 
   dialog::backdrop {
-    background: rgb(36 22 14 / 0.6);
+    background: rgb(20 33 61 / 0.6);
   }
 }
 
@@ -137,8 +149,8 @@
 
   .chevron-band {
     background-image:
-      linear-gradient(135deg, transparent 75%, rgb(212 165 20 / 0.18) 75%),
-      linear-gradient(225deg, transparent 75%, rgb(212 165 20 / 0.18) 75%);
+      linear-gradient(135deg, transparent 75%, rgb(252 163 17 / 0.16) 75%),
+      linear-gradient(225deg, transparent 75%, rgb(252 163 17 / 0.16) 75%);
     background-size: 28px 28px;
     background-position: 0 0, 14px 0;
   }

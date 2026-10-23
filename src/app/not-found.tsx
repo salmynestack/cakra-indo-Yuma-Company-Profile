@@ -11,10 +11,10 @@ export default function NotFound() {
         </div>
 
         <div className="space-y-2">
-          <p className="font-display text-xs font-bold uppercase tracking-wider text-brand-700">
+          <p className="font-ui text-xs font-bold uppercase tracking-wider text-brand-700">
             Error 404
           </p>
-          <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-950">
+          <h1 className="font-hero font-normal tracking-wide leading-[0.95] text-5xl sm:text-6xl text-brand-950">
             Halaman Tidak Ditemukan
           </h1>
           <p className="text-sm text-ink-600 leading-relaxed">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Bebas_Neue, Lora, Montserrat, Oxygen, Source_Sans_3 } from "next/font/google";
 import { company, siteUrl } from "@/data/company";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
@@ -8,17 +8,38 @@ import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { getOrganizationSchema } from "@/lib/seo";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+// Source Sans 3 adalah nama baru Source Sans Pro di Google Fonts.
+const sourceSans = Source_Sans_3({
+  variable: "--font-source-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
   display: "swap",
-  weight: ["500", "600", "700", "800"],
+});
+
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas",
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+});
+
+const lora = Lora({
+  variable: "--font-lora",
+  subsets: ["latin"],
+  display: "swap",
+  style: ["normal", "italic"],
+});
+
+const oxygen = Oxygen({
+  variable: "--font-oxygen",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -55,9 +76,9 @@ export const metadata: Metadata = {
     siteName: company.name,
     images: [
       {
-        url: "/images/hero-ruang-rapat.jpg",
-        width: 1200,
-        height: 800,
+        url: "/images/workshop-mebel-kayu.jpg",
+        width: 1024,
+        height: 682,
         alt: `${company.name} - Mebel dan Interior Instansi`,
       },
     ],
@@ -78,7 +99,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${inter.variable} ${plusJakartaSans.variable} h-full antialiased`}
+      className={`${sourceSans.variable} ${montserrat.variable} ${bebasNeue.variable} ${lora.variable} ${oxygen.variable} h-full antialiased`}
     >
       <head>
         <script

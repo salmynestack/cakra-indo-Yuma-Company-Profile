@@ -102,7 +102,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "relative px-4 py-2 text-sm font-semibold transition-colors rounded-control",
+                  "relative px-4 py-2 font-ui text-sm font-bold transition-colors rounded-control",
                   isActive
                     ? "text-brand-700 bg-brand-50"
                     : "text-ink-700 hover:text-brand-700 hover:bg-cream-100/60",
@@ -112,7 +112,7 @@ export function Navbar() {
                 {link.label}
                 {isActive && (
                   <span
-                    className="absolute bottom-1 left-4 right-4 h-0.5 bg-brand-600 rounded-full"
+                    className="absolute bottom-1 left-4 right-4 h-0.5 bg-gold-500 rounded-full"
                     aria-hidden="true"
                   />
                 )}
@@ -210,9 +210,9 @@ export function Navbar() {
                       href={link.href}
                       onClick={() => setIsOpen(false)}
                       className={cn(
-                        "flex items-center justify-between px-4 py-3 text-base font-semibold rounded-control transition-colors min-h-[44px]",
+                        "flex items-center justify-between px-4 py-3 font-ui text-base font-bold rounded-control transition-colors min-h-[44px]",
                         isActive
-                          ? "bg-brand-50 text-brand-700 border-l-4 border-brand-600"
+                          ? "bg-brand-50 text-brand-950 border-l-4 border-gold-500"
                           : "text-ink-800 hover:bg-cream-100 hover:text-brand-700",
                       )}
                       aria-current={isActive ? "page" : undefined}

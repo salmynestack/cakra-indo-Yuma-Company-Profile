@@ -17,18 +17,17 @@ export const projects: Project[] = [
       "Memadukan partisi slat kayu bernuansa hangat, meja resepsionis terintegrasi manajemen kabel rapi, serta mebel bangku kuliah dari rangka baja berdaya tahan tinggi dan permukaan kayu laminasi presisi.",
     result:
       "Ruang lobi dan area perkuliahan selesai tepat sebelum tahun ajaran baru dimulai, menghadirkan suasana belajar yang nyaman dan meningkatkan citra institusi.",
-    cover: "/images/projects/unsoed-1.jpg",
+    cover: "/images/bahan-baku-kayu-jati.jpg",
     gallery: [
       {
-        src: "/images/projects/unsoed-1.jpg",
-        alt: "Lobi Fakultas Unsoed dengan dinding panel slat kayu dan meja resepsionis",
+        src: "/images/bahan-baku-kayu-jati.jpg",
+        alt: "Bahan baku kayu jati yang disiapkan untuk panel slat dan mebel",
       },
       {
-        src: "/images/projects/unsoed-2.jpg",
-        alt: "Ruang perkuliahan luas dengan meja dan kursi kuliah tertata rapi",
+        src: "/images/workshop-mebel-kayu.jpg",
+        alt: "Pemeriksaan pesanan meja dan kursi kayu di workshop sebelum pengiriman",
       },
     ],
-    illustrativeImages: true,
     featured: true,
   },
   {
@@ -47,18 +46,17 @@ export const projects: Project[] = [
       "Merancang workstation modular dengan partisi akustik rendah untuk kolaborasi antartim, baki kabel tertutup di bawah meja, serta meja rapat oval berkapasitas besar dengan kotak stopkontak pop-up terpasang rapi.",
     result:
       "Ruang kantor dan ruang rapat operasional kini lebih rapi, fungsional, dan mendukung kelancaran koordinasi harian tim kilang.",
-    cover: "/images/projects/kpi-1.jpg",
+    cover: "/images/projects/pengiriman-pertamina-cilacap.jpg",
     gallery: [
       {
-        src: "/images/projects/kpi-1.jpg",
-        alt: "Area kerja workstation terbuka dengan partisi modular di PT KPI",
+        src: "/images/projects/pengiriman-pertamina-cilacap.jpg",
+        alt: "Truk pengiriman barang tiba di area kantor Pertamina Cilacap",
       },
       {
-        src: "/images/projects/kpi-2.jpg",
-        alt: "Ruang rapat eksekutif dengan meja oval kayu solid dan kursi kulit",
+        src: "/images/projects/serah-terima-barang-pertamina.jpg",
+        alt: "Pencocokan dokumen serah terima dengan kardus barang di lokasi klien",
       },
     ],
-    illustrativeImages: true,
     featured: true,
   },
 
@@ -70,9 +68,26 @@ export const projects: Project[] = [
     client: "SMA Negeri 1 Cilacap",
     clientType: "Pendidikan",
     location: "Cilacap",
-    hasDetail: false,
-    summary: "Pengadaan set meja kursi siswa dan meja guru untuk ruang kelas dan laboratorium sekolah.",
-    gallery: [],
+    hasDetail: true,
+    summary:
+      "Pengadaan dan perakitan ratusan set meja kursi siswa kayu solid dan meja guru untuk kenyamanan ruang kelas serta laboratorium sekolah.",
+    challenge:
+      "Kebutuhan peremajaan ratusan set bangku dan meja belajar siswa dengan tenggat waktu ketat sebelum semester baru dimulai, membutuhkan kayu berkualitas yang kokoh dan tahan lama.",
+    solution:
+      "Memproduksi secara terpusat di workshop Cilacap menggunakan kayu pilihan berkekuatan tinggi, sambungan pasak presisi, sudut meja dihaluskan demi keamanan siswa, serta pelapisan finishing tahan gores.",
+    result:
+      "Seluruh set meja dan bangku sekolah diserahterimakan tepat waktu dalam kondisi prima, mendukung peningkatan kenyamanan belajar mengajar siswa.",
+    cover: "/images/projects/produksi-mebel-sekolah.jpg",
+    gallery: [
+      {
+        src: "/images/projects/produksi-mebel-sekolah.jpg",
+        alt: "Pabrikasi dan penataan set meja kursi kelas di workshop kayu Artalana",
+      },
+      {
+        src: "/images/workshop-mebel-kayu.jpg",
+        alt: "Pemeriksaan dimensi dan standar kualitas mebel sebelum dikirim ke sekolah",
+      },
+    ],
     featured: true,
   },
   {

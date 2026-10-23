@@ -41,14 +41,21 @@ export function ContactForm() {
   const initialLayanan = services.some((s) => s.slug === queryLayanan)
     ? queryLayanan
     : "";
-  const initialKategori = [
-    "calon-klien",
-    "konsumen",
-    "vendor",
-    "mitra-bisnis",
-    "lainnya",
-  ].includes(queryKategori)
-    ? (queryKategori as any)
+
+  const isSenderCategory = (
+    val: string | null,
+  ): val is ContactFormData["kategori"] => {
+    return (
+      val === "calon-klien" ||
+      val === "konsumen" ||
+      val === "vendor" ||
+      val === "mitra-bisnis" ||
+      val === "lainnya"
+    );
+  };
+
+  const initialKategori: ContactFormData["kategori"] = isSenderCategory(queryKategori)
+    ? queryKategori
     : "calon-klien";
 
   const {
@@ -67,7 +74,7 @@ export function ContactForm() {
       kategori: initialKategori,
       layanan: initialLayanan,
       pesan: "",
-      persetujuan: true as any,
+      persetujuan: true,
     },
   });
 
@@ -76,13 +83,8 @@ export function ContactForm() {
     if (queryLayanan && services.some((s) => s.slug === queryLayanan)) {
       setValue("layanan", queryLayanan);
     }
-    if (
-      queryKategori &&
-      ["calon-klien", "konsumen", "vendor", "mitra-bisnis", "lainnya"].includes(
-        queryKategori,
-      )
-    ) {
-      setValue("kategori", queryKategori as any);
+    if (isSenderCategory(queryKategori)) {
+      setValue("kategori", queryKategori);
     }
   }, [queryLayanan, queryKategori, setValue]);
 

@@ -14,7 +14,7 @@ export function Badge({
   ...props
 }: BadgeProps) {
   const base =
-    "inline-flex items-center gap-1.5 font-display font-medium rounded-full select-none";
+    "inline-flex items-center gap-1.5 font-ui font-bold rounded-full select-none";
 
   const variants = {
     brand: "bg-brand-100 text-brand-900 border border-brand-200",

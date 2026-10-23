@@ -69,15 +69,15 @@ export default function TentangKamiPage() {
             <div className="lg:col-span-6">
               <div className="relative overflow-hidden rounded-card border-2 border-brand-200 shadow-lg aspect-4/3">
                 <Image
-                  src="/images/gudang.jpg"
-                  alt="Fasilitas workshop dan gudang penyimpanan mebel PT Cakra Indo Yuma"
+                  src="/images/bahan-baku-kayu-jati.jpg"
+                  alt="Tumpukan gelondongan kayu jati sebagai bahan baku mebel di workshop PT Cakra Indo Yuma"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
               <p className="mt-2 text-right text-xs text-ink-500 italic">
-                Pusat logistik dan perakitan furnitur di Kabupaten Cilacap
+                Stok bahan baku kayu jati di workshop Kabupaten Cilacap
               </p>
             </div>
           </div>
@@ -98,15 +98,15 @@ export default function TentangKamiPage() {
             {/* Box Visi */}
             <div className="lg:col-span-5 flex flex-col justify-between rounded-card border-2 border-brand-400 bg-brand-950 p-8 sm:p-10 text-cream-50 shadow-md">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold-400">
+                <div className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-wider text-gold-500">
                   <span className="chevron-mark" aria-hidden="true" />
                   <span>Visi Korporasi</span>
                 </div>
-                <blockquote className="font-display text-xl sm:text-2xl font-bold leading-relaxed text-white">
+                <blockquote className="font-serif text-xl sm:text-2xl italic font-medium leading-relaxed text-white">
                   &ldquo;{vision}&rdquo;
                 </blockquote>
               </div>
-              <p className="mt-8 text-xs text-ink-400 border-t border-brand-800 pt-4">
+              <p className="mt-8 text-xs text-brand-200 border-t border-brand-800 pt-4">
                 Disahkan dalam Rencana Jangka Panjang Perusahaan sejak 2020.
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function TentangKamiPage() {
             {/* Box Misi (5 poin) */}
             <div className="lg:col-span-7 rounded-card border border-ink-200 bg-white p-8 sm:p-10 shadow-xs flex flex-col justify-between">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700">
+                <div className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-wider text-brand-700">
                   <span className="chevron-mark" aria-hidden="true" />
                   <span>Misi Perusahaan (5 Poin Komitmen)</span>
                 </div>

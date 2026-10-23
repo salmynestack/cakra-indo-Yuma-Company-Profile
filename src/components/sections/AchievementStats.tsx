@@ -23,8 +23,8 @@ function StatItem({
     // Cek preferensi reduced motion (PRD H-04)
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mediaQuery.matches || raw) {
-      setCurrent(value);
-      return;
+      const frameId = requestAnimationFrame(() => setCurrent(value));
+      return () => cancelAnimationFrame(frameId);
     }
 
     const observer = new IntersectionObserver(
@@ -66,7 +66,7 @@ function StatItem({
       ref={elementRef}
       className="flex flex-col items-center justify-center p-6 text-center border-b sm:border-b-0 sm:border-r last:border-b-0 last:border-r-0 border-brand-800/60"
     >
-      <div className="font-display text-4xl sm:text-5xl font-extrabold text-gold-400 tracking-tight">
+      <div className="font-hero text-6xl sm:text-7xl leading-none font-normal tracking-wide text-gold-500">
         {raw ? current : `${formatNumber(current)}${suffix}`}
       </div>
       <p className="mt-2 text-sm sm:text-base font-medium text-cream-100 max-w-[200px]">

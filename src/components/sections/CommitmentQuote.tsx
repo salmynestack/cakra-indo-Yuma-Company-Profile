@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { company } from "@/data/company";
 import { Button } from "@/components/ui/Button";
 
 export function CommitmentQuote() {
@@ -8,12 +6,12 @@ export function CommitmentQuote() {
       <div className="container-site">
         <div className="relative mx-auto max-w-4xl rounded-card border-2 border-brand-300 bg-white p-8 sm:p-12 shadow-sm">
           <div className="space-y-6 text-center">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700">
+            <div className="inline-flex items-center gap-2 font-ui text-xs font-bold uppercase tracking-wider text-brand-700">
               <span className="chevron-mark" aria-hidden="true" />
-              <span>Komitmen Mutu & Layanan</span>
+              <span>Komitmen Mutu &amp; Layanan</span>
             </div>
 
-            <blockquote className="font-display text-xl sm:text-2xl font-bold text-brand-950 leading-relaxed">
+            <blockquote className="font-serif text-xl sm:text-2xl italic font-medium text-brand-950 leading-relaxed">
               &ldquo;Setiap pekerjaan yang kami terima kami pandang sebagai amanah
               kemitraan jangka panjang. Kami memastikan material kayu, struktur
               furnitur, dan pasokan barang tiba di lokasi instansi dalam kondisi
