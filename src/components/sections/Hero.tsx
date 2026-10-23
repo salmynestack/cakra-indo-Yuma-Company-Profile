@@ -20,11 +20,7 @@ export function Hero() {
             </div>
 
             <h1 className="font-hero text-[2.75rem] leading-[0.95] font-normal tracking-wide text-brand-950 sm:text-6xl md:text-7xl">
-              Supplier Kebutuhan Instansi,{" "}
-              <span className="text-brand-950 underline decoration-gold-500 decoration-[6px] underline-offset-[6px]">
-                Mebel Kayu
-              </span>
-              , dan Interior Ruang Kerja
+              Supplier Kebutuhan Instansi, Mebel Kayu, dan Interior Ruang Kerja
             </h1>
 
             <p className="text-base sm:text-lg text-ink-600 leading-relaxed max-w-2xl">
@@ -42,28 +38,6 @@ export function Hero() {
               <Button href="/project" variant="outline" size="lg">
                 Lihat Rekam Jejak
               </Button>
-            </div>
-
-            {/* Micro proof badges */}
-            <div className="grid grid-cols-3 gap-3 pt-6 border-t border-ink-200/80 text-xs text-ink-600 sm:gap-4 sm:text-sm">
-              <div>
-                <p className="font-hero text-2xl leading-none tracking-wide text-brand-950 sm:text-3xl">
-                  30+ Project
-                </p>
-                <p className="mt-1 text-ink-500 text-xs">Selesai tepat waktu</p>
-              </div>
-              <div>
-                <p className="font-hero text-2xl leading-none tracking-wide text-brand-950 sm:text-3xl">
-                  Legalitas NIB
-                </p>
-                <p className="mt-1 break-all text-ink-500 text-xs">0220208341324</p>
-              </div>
-              <div>
-                <p className="font-hero text-2xl leading-none tracking-wide text-brand-950 sm:text-3xl">
-                  Brand Alterior
-                </p>
-                <p className="mt-1 text-ink-500 text-xs">Mebel &amp; interior dinas</p>
-              </div>
             </div>
           </div>
 
@@ -84,12 +58,6 @@ export function Hero() {
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover"
                 />
-              </div>
-
-              <div className="relative mt-5 text-right sm:mt-6">
-                <span className="text-xs text-ink-500 italic">
-                  Pemeriksaan mutu mebel kayu sebelum dikirim ke instansi
-                </span>
               </div>
             </div>
           </div>

@@ -20,9 +20,6 @@ export function AboutSummary() {
                 className="object-cover"
               />
             </div>
-            <p className="mt-2 text-right text-xs text-ink-500 italic">
-              Pengecekan dokumen serah terima barang di lokasi klien
-            </p>
           </div>
 
           {/* Konten Teks (PRD H-02) */}
