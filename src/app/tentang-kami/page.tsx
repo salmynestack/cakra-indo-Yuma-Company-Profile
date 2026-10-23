@@ -10,7 +10,6 @@ import {
   values,
   vision,
 } from "@/data/company";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -28,7 +27,6 @@ export default function TentangKamiPage() {
       {/* Header Halaman */}
       <div className="border-b border-ink-200/80 bg-white py-8 sm:py-12">
         <div className="container-site space-y-4">
-          <Breadcrumb items={[{ label: "Tentang Kami" }]} />
           <SectionHeading
             as="h1"
             kicker="Profil Korporasi"
@@ -173,7 +171,7 @@ export default function TentangKamiPage() {
           <SectionHeading
             kicker="Jejak Langkah"
             title="Sejarah dan Perkembangan Perusahaan"
-            subtitle="Perjalanan bertumbuh dari awal pendirian hingga menyelesaikan lebih dari 30 proyek instansi."
+            subtitle="Perjalanan bertumbuh dari awal pendirian hingga menyelesaikan 49 proyek resmi instansi pemerintah, BUMN, dan perguruan tinggi."
             align="center"
           />
 

@@ -1,14 +1,13 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProjectListClient } from "./ProjectListClient";
 
 export const metadata: Metadata = {
-  title: "Portofolio Rekam Jejak Project (30 Pekerjaan Selesai) | PT Cakra Indo Yuma",
+  title: "Portofolio Rekam Jejak Project (49 Pekerjaan Selesai) | PT Cakra Indo Yuma",
   description:
-    "Daftar 30 rekam jejak pekerjaan pengadaan mebel, renovasi interior, ATK, dan pengadaan instansi yang telah diselesaikan oleh PT Cakra Indo Yuma (2020 sampai 2025).",
+    "Daftar 49 rekam jejak pekerjaan pengadaan barang, mebel, interior, event organizer, dan konstruksi yang telah diselesaikan oleh PT Cakra Indo Yuma (Tahun 2020 sampai 2026).",
 };
 
 export default function ProjectPage() {
@@ -17,12 +16,11 @@ export default function ProjectPage() {
       {/* Header Halaman */}
       <div className="border-b border-ink-200/80 bg-white py-8 sm:py-12">
         <div className="container-site space-y-4">
-          <Breadcrumb items={[{ label: "Project" }]} />
           <SectionHeading
             as="h1"
             kicker="Portofolio Rekam Jejak"
             title="Daftar Pekerjaan & Pengadaan yang Telah Selesai"
-            subtitle="Koleksi 30 proyek resmi untuk instansi pemerintah, BUMN, perguruan tinggi, dan korporasi swasta sejak tahun 2020."
+            subtitle="Koleksi 49 proyek resmi untuk instansi pemerintah, BUMN, perguruan tinggi, dan korporasi swasta (Tahun 2020 - 2026)."
           />
         </div>
       </div>

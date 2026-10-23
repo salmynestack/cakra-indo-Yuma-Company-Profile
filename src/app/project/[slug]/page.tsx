@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { getDetailedProjects, getProjectBySlug, projects } from "@/data/projects";
 import { services } from "@/data/services";
 import { Badge } from "@/components/ui/Badge";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { ProjectLightbox } from "@/components/ui/ProjectLightbox";
@@ -65,20 +64,18 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
   return (
     <div className="bg-cream-50 min-h-screen">
-      {/* Header Halaman & Breadcrumb */}
+      {/* Header Halaman */}
       <div className="border-b border-ink-200/80 bg-white py-8 sm:py-12">
         <div className="container-site space-y-4">
-          <Breadcrumb
-            items={[
-              { label: "Project", href: "/project" },
-              { label: project.client },
-            ]}
-          />
-
-          <div className="flex flex-wrap items-center gap-2 pt-2">
+          <div className="flex flex-wrap items-center gap-2">
             <Badge variant="brand" size="md">
               Klien: {project.clientType}
             </Badge>
+            {project.activityType && (
+              <Badge variant="gold" size="md">
+                {project.activityType}
+              </Badge>
+            )}
             {project.location && (
               <Badge variant="neutral" size="md">
                 Lokasi: {project.location}
@@ -178,6 +175,15 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                   </span>
                 </div>
 
+                {project.activityType && (
+                  <div>
+                    <span className="text-xs text-ink-500 block">Jenis Kegiatan</span>
+                    <span className="font-semibold text-brand-950">
+                      {project.activityType}
+                    </span>
+                  </div>
+                )}
+
                 <div>
                   <span className="text-xs text-ink-500 block">Lokasi Proyek</span>
                   <span className="font-semibold text-ink-900">
@@ -256,6 +262,11 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     <p className="text-xs text-ink-600 line-clamp-2">
                       {rel.summary}
                     </p>
+                    {rel.contractValue && (
+                      <div className="pt-1 text-[11px] font-semibold text-brand-800">
+                        Nilai: {rel.contractValue}
+                      </div>
+                    )}
                   </div>
                   <div className="pt-4 border-t border-ink-100 mt-4 flex items-center justify-between text-xs">
                     {rel.hasDetail ? (

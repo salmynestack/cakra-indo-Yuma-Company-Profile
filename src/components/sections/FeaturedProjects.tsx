@@ -25,7 +25,7 @@ export function FeaturedProjects() {
           />
           <div className="shrink-0">
             <Button href="/project" variant="primary" size="md">
-              <span>Lihat Semua Project (30)</span>
+              <span>Lihat Semua Project ({projects.length})</span>
               <span className="ml-1 select-none" aria-hidden="true">&rarr;</span>
             </Button>
           </div>
@@ -54,8 +54,28 @@ export function FeaturedProjects() {
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center bg-brand-50 text-brand-700">
-                        <span className="chevron-mark scale-150" aria-hidden="true" />
+                      <div className="relative flex h-full w-full flex-col justify-between p-4 bg-gradient-to-br from-brand-950 via-brand-900 to-stone-900 text-white overflow-hidden">
+                        <div 
+                          className="absolute inset-0 opacity-10 pointer-events-none" 
+                          style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #d4af37 1px, transparent 0)', backgroundSize: '16px 16px' }}
+                          aria-hidden="true" 
+                        />
+                        <div className="h-6" />
+                        <div className="relative z-10 space-y-1.5 mt-auto">
+                          <div className="flex items-center gap-1.5">
+                            <span className="inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
+                            <span className="text-[10px] font-bold uppercase tracking-widest text-amber-300/90 font-sans">
+                              Rekam Jejak Terverifikasi
+                            </span>
+                          </div>
+                          <p className="text-xs font-semibold text-cream-100/90 line-clamp-1">
+                            {project.client}
+                          </p>
+                          <div className="flex items-center justify-between text-[10px] text-cream-200/70 pt-1 border-t border-white/10">
+                            <span>Arsip Kontrak Resmi</span>
+                            <span className="font-mono text-amber-200/80">PT Cakra Indo Yuma</span>
+                          </div>
+                        </div>
                       </div>
                     )}
                     <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">

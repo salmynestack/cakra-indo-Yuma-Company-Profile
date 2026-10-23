@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { company } from "@/data/company";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
@@ -14,7 +13,6 @@ export default function KebijakanPrivasiPage() {
   return (
     <div className="bg-cream-50 min-h-screen py-10 lg:py-16">
       <div className="container-site max-w-4xl space-y-8">
-        <Breadcrumb items={[{ label: "Kebijakan Privasi" }]} />
 
         <div className="rounded-card border border-ink-200 bg-white p-8 sm:p-12 shadow-xs space-y-8">
           <SectionHeading

@@ -27,7 +27,7 @@ export function ProjectListClient() {
       : "all";
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortBy, setSortBy] = useState<"default" | "az" | "za">("default");
+  const [sortBy, setSortBy] = useState<"default" | "az" | "za" | "terbaru">("default");
 
   // Handler ubah kategori
   const handleCategoryChange = (category: string) => {
@@ -68,6 +68,7 @@ export function ProjectListClient() {
           p.title.toLowerCase().includes(q) ||
           p.client.toLowerCase().includes(q) ||
           (p.location && p.location.toLowerCase().includes(q)) ||
+          (p.activityType && p.activityType.toLowerCase().includes(q)) ||
           p.summary.toLowerCase().includes(q),
       );
     }
@@ -77,6 +78,8 @@ export function ProjectListClient() {
       result.sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortBy === "za") {
       result.sort((a, b) => b.title.localeCompare(a.title));
+    } else if (sortBy === "terbaru") {
+      result.sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
     }
 
     return result;
@@ -179,6 +182,7 @@ export function ProjectListClient() {
               className="rounded-control border border-ink-300 bg-white px-3 py-2 text-xs font-medium text-ink-800 focus-visible:outline-brand-600 min-h-[40px]"
             >
               <option value="default">Default Rekam Jejak</option>
+              <option value="terbaru">Tahun Terbaru (2025 - 2020)</option>
               <option value="az">Nama Proyek (A - Z)</option>
               <option value="za">Nama Proyek (Z - A)</option>
             </select>
@@ -227,11 +231,28 @@ export function ProjectListClient() {
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     ) : (
-                      <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-cream-100 to-cream-200 text-brand-800 p-4 text-center">
-                        <span className="chevron-mark scale-125 mb-1" aria-hidden="true" />
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-brand-700">
-                          {project.clientType}
-                        </span>
+                      <div className="relative flex h-full w-full flex-col justify-between p-4 bg-gradient-to-br from-brand-950 via-brand-900 to-stone-900 text-white overflow-hidden">
+                        <div 
+                          className="absolute inset-0 opacity-10 pointer-events-none" 
+                          style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #d4af37 1px, transparent 0)', backgroundSize: '16px 16px' }}
+                          aria-hidden="true" 
+                        />
+                        <div className="h-6" />
+                        <div className="relative z-10 space-y-1.5 mt-auto">
+                          <div className="flex items-center gap-1.5">
+                            <span className="inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
+                            <span className="text-[10px] font-bold uppercase tracking-widest text-amber-300/90 font-sans">
+                              Rekam Jejak Terverifikasi
+                            </span>
+                          </div>
+                          <p className="text-xs font-semibold text-cream-100/90 line-clamp-1">
+                            {project.client}
+                          </p>
+                          <div className="flex items-center justify-between text-[10px] text-cream-200/70 pt-1 border-t border-white/10">
+                            <span>Arsip Kontrak Resmi</span>
+                            <span className="font-mono text-amber-200/80">PT Cakra Indo Yuma</span>
+                          </div>
+                        </div>
                       </div>
                     )}
                     <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
@@ -243,12 +264,22 @@ export function ProjectListClient() {
                           {project.location}
                         </Badge>
                       )}
+                      {project.year && (
+                        <Badge variant="outline" size="sm" className="bg-white/90 font-bold">
+                          {project.year}
+                        </Badge>
+                      )}
                     </div>
                   </div>
 
                   {/* Konten Card */}
                   <div className="p-5 space-y-2.5">
-                    <div className="flex flex-wrap gap-1">
+                    <div className="flex flex-wrap items-center gap-1">
+                      {project.activityType && (
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100/90 border border-amber-300/60 px-2 py-0.5 rounded-xs">
+                          {project.activityType}
+                        </span>
+                      )}
                       {project.categories.map((cat) => (
                         <span
                           key={cat}
@@ -292,9 +323,10 @@ export function ProjectListClient() {
                       <span className="select-none" aria-hidden="true">&rarr;</span>
                     </Link>
                   ) : (
-                    <span className="text-[11px] text-ink-500 font-medium">
-                      Pekerjaan Selesai & Terverifikasi
-                    </span>
+                    <div className="flex items-center gap-1.5 text-[11px] text-ink-500 font-medium">
+                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                      <span>Selesai & Terverifikasi</span>
+                    </div>
                   )}
                   {hasDetail && (
                     <Badge variant="gold" size="sm">
