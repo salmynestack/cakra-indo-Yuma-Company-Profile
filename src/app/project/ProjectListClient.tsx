@@ -231,28 +231,18 @@ export function ProjectListClient() {
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     ) : (
-                      <div className="relative flex h-full w-full flex-col justify-between p-4 bg-gradient-to-br from-brand-950 via-brand-900 to-stone-900 text-white overflow-hidden">
-                        <div 
-                          className="absolute inset-0 opacity-10 pointer-events-none" 
-                          style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #d4af37 1px, transparent 0)', backgroundSize: '16px 16px' }}
-                          aria-hidden="true" 
-                        />
-                        <div className="h-6" />
-                        <div className="relative z-10 space-y-1.5 mt-auto">
-                          <div className="flex items-center gap-1.5">
-                            <span className="inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-amber-300/90 font-sans">
-                              Rekam Jejak Terverifikasi
-                            </span>
-                          </div>
-                          <p className="text-xs font-semibold text-cream-100/90 line-clamp-1">
-                            {project.client}
-                          </p>
-                          <div className="flex items-center justify-between text-[10px] text-cream-200/70 pt-1 border-t border-white/10">
-                            <span>Arsip Kontrak Resmi</span>
-                            <span className="font-mono text-amber-200/80">PT Cakra Indo Yuma</span>
-                          </div>
+                      <div className="flex h-full w-full flex-col items-center justify-center p-5 pt-12 bg-white text-center border-b border-ink-100/70 select-none">
+                        <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-cream-100 text-brand-800">
+                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                          </svg>
                         </div>
+                        <span className="text-xs font-bold text-brand-950 uppercase tracking-wide">
+                          Dokumentasi Arsip
+                        </span>
+                        <p className="mt-1 text-[11px] text-ink-500 max-w-[210px] leading-relaxed">
+                          Foto pekerjaan tersimpan dalam arsip fisik kontrak resmi perusahaan.
+                        </p>
                       </div>
                     )}
                     <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
@@ -290,14 +280,8 @@ export function ProjectListClient() {
                       ))}
                     </div>
 
-                    <h3 className="font-display text-base sm:text-lg font-bold text-brand-950 group-hover:text-brand-700 transition-colors leading-snug">
-                      {hasDetail ? (
-                        <Link href={`/project/${project.slug}`}>
-                          {project.title}
-                        </Link>
-                      ) : (
-                        project.title
-                      )}
+                    <h3 className="font-display text-base sm:text-lg font-bold text-brand-950 leading-snug">
+                      {project.title}
                     </h3>
 
                     <p className="text-xs text-ink-600 font-medium">
@@ -314,24 +298,14 @@ export function ProjectListClient() {
                 </div>
 
                 <div className="p-5 pt-0 mt-auto border-t border-ink-100 flex items-center justify-between">
-                  {hasDetail ? (
-                    <Link
-                      href={`/project/${project.slug}`}
-                      className="inline-flex items-center gap-1 text-xs font-bold text-brand-700 hover:text-brand-900 focus-visible:outline-brand-600"
-                    >
-                      <span>Lihat Rincian & Dokumentasi</span>
-                      <span className="select-none" aria-hidden="true">&rarr;</span>
-                    </Link>
-                  ) : (
-                    <div className="flex items-center gap-1.5 text-[11px] text-ink-500 font-medium">
-                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                      <span>Selesai & Terverifikasi</span>
-                    </div>
-                  )}
-                  {hasDetail && (
-                    <Badge variant="gold" size="sm">
-                      Ada Foto
-                    </Badge>
+                  <div className="flex items-center gap-1.5 text-[11px] text-ink-500 font-medium">
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                    <span>Selesai & Terverifikasi</span>
+                  </div>
+                  {project.year && (
+                    <span className="text-[11px] font-semibold text-ink-400">
+                      Tahun {project.year}
+                    </span>
                   )}
                 </div>
               </Card>
