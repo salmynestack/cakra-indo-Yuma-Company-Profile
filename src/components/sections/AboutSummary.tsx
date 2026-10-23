@@ -7,7 +7,7 @@ export function AboutSummary() {
   return (
     <section className="py-16 lg:py-24 bg-white border-b border-ink-200/60 overflow-hidden">
       <div className="container-site">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-14">
           {/* Visual Gudang / Operasional */}
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative mx-auto max-w-lg lg:max-w-none">
@@ -29,7 +29,7 @@ export function AboutSummary() {
           </div>
 
           {/* Konten Teks */}
-          <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
+          <div className="lg:col-span-7 space-y-5 order-1 lg:order-2 lg:pt-4">
             <SectionHeading
               kicker="Tentang PT Cakra Indo Yuma"
               title="Perusahaan Supplier Berpengalaman dari Kabupaten Cilacap"
