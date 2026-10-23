@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-cream-50 pt-8 pb-16 lg:pt-16 lg:pb-24 border-b border-ink-200/60">
+    <section className="relative overflow-hidden bg-cream-50 min-h-[calc(100vh-5rem)] min-h-[calc(100dvh-5rem)] flex flex-col justify-center py-12 lg:py-16 border-b border-ink-200/60">
       {/* Chevron decorative background band (PRD 10.6) */}
       <div
         className="chevron-band absolute inset-0 opacity-40 pointer-events-none"
