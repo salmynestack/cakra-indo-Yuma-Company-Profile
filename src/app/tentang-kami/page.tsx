@@ -4,7 +4,6 @@ import Link from "next/link";
 import {
   company,
   fullAddress,
-  legalItems,
   missions,
   timeline,
   values,
@@ -16,9 +15,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ClientMarquee } from "@/components/sections/ClientMarquee";
 
 export const metadata: Metadata = {
-  title: "Tentang Kami | Profil Perusahaan, Visi Misi & Legalitas",
+  title: "Tentang Kami | Profil Perusahaan, Visi Misi & Nilai Budaya",
   description:
-    "Profil lengkap PT Cakra Indo Yuma, sejarah pendirian sejak 2020 di Cilacap, visi misi, nilai budaya kerja, dan ringkasan legalitas resmi badan hukum.",
+    "Profil lengkap PT Cakra Indo Yuma, sejarah pendirian sejak 2020 di Cilacap, visi misi, dan nilai budaya kerja profesional.",
 };
 
 export default function TentangKamiPage() {
@@ -215,54 +214,6 @@ export default function TentangKamiPage() {
                   </div>
                 );
               })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Legalitas & Sertifikasi (T-06 & T-09) */}
-      <section className="py-16 lg:py-20 border-b border-ink-200/60 bg-white">
-        <div className="container-site space-y-10">
-          <div className="mx-auto max-w-3xl text-center space-y-4">
-            <SectionHeading
-              kicker="Kepastian Hukum"
-              title="Ringkasan Dokumen Legalitas Resmi"
-              subtitle="Untuk melindungi data pribadi pengurus sesuai UU No. 27 Tahun 2022 (PDP), salinan scan dokumen hanya diberikan secara resmi melalui permohonan tertulis."
-              align="center"
-            />
-          </div>
-
-          <div className="mx-auto max-w-3xl overflow-hidden rounded-card border border-ink-200 bg-cream-50/50 shadow-xs">
-            <dl className="divide-y divide-ink-200">
-              {legalItems.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="grid grid-cols-1 gap-1 p-4 sm:grid-cols-3 sm:gap-4 sm:px-6 hover:bg-white transition-colors"
-                >
-                  <dt className="text-sm font-semibold text-brand-950">
-                    {item.label}
-                  </dt>
-                  <dd className="text-sm text-ink-700 sm:col-span-2 font-mono">
-                    {item.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-
-          {/* Unduh Company Profile (T-09) */}
-          <div className="mx-auto max-w-2xl rounded-control bg-cream-100 p-6 border border-brand-200 text-center space-y-3">
-            <h3 className="font-display text-base font-bold text-brand-950">
-              Membutuhkan Dokumen Company Profile Lengkap?
-            </h3>
-            <p className="text-sm text-ink-600 leading-relaxed">
-              Kami menyediakan Company Profile versi publik dalam format PDF
-              untuk keperluan lelang atau evaluasi vendor instansi Anda.
-            </p>
-            <div className="pt-2">
-              <Button href="/kontak?kategori=vendor" variant="primary" size="sm">
-                Minta Dokumen Profil Resmi
-              </Button>
             </div>
           </div>
         </div>

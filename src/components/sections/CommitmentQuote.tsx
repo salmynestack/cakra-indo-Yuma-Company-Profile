@@ -32,7 +32,7 @@ export function CommitmentQuote() {
                 Diskusikan Kebutuhan Anda
               </Button>
               <Button href="/tentang-kami" variant="outline" size="md">
-                Pelajari Legalitas Kami
+                Pelajari Profil Kami
               </Button>
             </div>
           </div>
