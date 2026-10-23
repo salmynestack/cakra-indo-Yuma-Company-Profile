@@ -6,7 +6,6 @@ import { services } from "@/data/services";
 import { workflowSteps } from "@/data/workflow";
 import { Accordion } from "@/components/ui/Accordion";
 import { Badge } from "@/components/ui/Badge";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -19,23 +18,27 @@ export const metadata: Metadata = {
     "Katalog 6 lini layanan pengadaan PT Cakra Indo Yuma: Mebel dan Furniture Alterior, Interior & Eksterior, ATK & Elektronik, Event Organizer, Supplier Restoran, dan Pengadaan Barang Umum.",
 };
 
-// Foto dokumentasi asli per jenis layanan. Layanan tanpa entri tampil tanpa foto.
+// Foto dokumentasi asli per jenis layanan terverifikasi sesuai kategori pekerjaan
 const serviceImages: Partial<Record<ServiceSlug, { src: string; alt: string }>> = {
   "mebel-furniture": {
-    src: "/images/workshop-mebel-kayu.jpg",
-    alt: "Pemeriksaan mutu kursi dan meja kayu jati di workshop Alterior",
+    src: "/images/projects/kursi-kuliah-brother-fib.jpg",
+    alt: "Pengadaan kursi kuliah Brother dan mebelair institusi pendidikan berkualitas Alterior",
   },
   "interior-eksterior": {
-    src: "/images/bahan-baku-kayu-jati.jpg",
-    alt: "Bahan baku kayu jati untuk panel dan elemen interior",
+    src: "/images/projects/ruang-dekan-fmipa-after.jpg",
+    alt: "Renovasi interior eksklusif ruang pimpinan dekanat dengan panel kayu, lampu LED, dan logo instansi",
   },
   "atk-kertas-elektronik": {
     src: "/images/projects/serah-terima-barang-pertamina.jpg",
-    alt: "Pengecekan dokumen serah terima kardus ATK dan elektronik di lokasi klien",
+    alt: "Pengecekan dokumen serah terima kardus ATK, kertas dinas, dan elektronik di lokasi klien",
+  },
+  "event-organizer": {
+    src: "/images/projects/serah-terima-sertifikat-dki.jpg",
+    alt: "Penyelenggaraan acara rapat koordinasi resmi dan seremonial serah terima sertifikat instansi",
   },
   "pengadaan-umum": {
-    src: "/images/projects/pengiriman-pertamina-cilacap.jpg",
-    alt: "Truk pengiriman barang pengadaan di area kantor Pertamina Cilacap",
+    src: "/images/projects/sarpras-tempat-sampah-pengadaan-umum.jpg",
+    alt: "Pengadaan sarana prasarana tempat sampah pilah 3 warna, dustbin roda, dan fasilitas umum instansi",
   },
 };
 
@@ -51,7 +54,6 @@ export default function LayananPage() {
       {/* Header Halaman */}
       <div className="border-b border-ink-200/80 bg-white py-8 sm:py-12">
         <div className="container-site space-y-4">
-          <Breadcrumb items={[{ label: "Layanan" }]} />
           <SectionHeading
             as="h1"
             kicker="Katalog Pengadaan Resmi"
