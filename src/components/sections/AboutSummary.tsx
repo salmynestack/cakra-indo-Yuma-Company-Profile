@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { company, vision } from "@/data/company";
 import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -67,20 +66,8 @@ export function AboutSummary() {
               </div>
             </div>
 
-            {/* Visi Perusahaan Card */}
-            <div className="rounded-card border border-amber-300/70 bg-gradient-to-r from-amber-50/60 via-cream-50/80 to-white p-4 space-y-1.5 shadow-xs">
-              <div className="flex items-center gap-2">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-amber-900 bg-amber-100/90 border border-amber-300/70 px-2 py-0.5 rounded-xs font-ui">
-                  Visi Perusahaan
-                </span>
-              </div>
-              <p className="font-serif text-sm sm:text-base italic text-ink-900 leading-relaxed">
-                &ldquo;{vision}&rdquo;
-              </p>
-            </div>
-
             {/* CTA Button */}
-            <div className="pt-1">
+            <div className="pt-2">
               <Button href="/tentang-kami" variant="secondary" size="md">
                 <span>Pelajari Selengkapnya Tentang Kami</span>
                 <span className="ml-1.5 select-none" aria-hidden="true">&rarr;</span>
