@@ -148,7 +148,7 @@ export const legalItems: LegalItem[] = [
 /** Angka pencapaian (H-04). Semua angka bersumber dari Company Profile 2026. */
 export const stats: Stat[] = [
   { value: 49, label: "project selesai (2020 - 2026)" },
-  { value: 2020, label: "tahun berdiri di Cilacap", raw: true },
+  { value: 2020, label: "resmi berdiri di Cilacap", raw: true },
   { value: 6, label: "lini layanan pengadaan" },
   { value: 12, label: "kota & kabupaten lokasi project" },
 ];

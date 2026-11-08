@@ -64,7 +64,7 @@ function StatItem({
   return (
     <div
       ref={elementRef}
-      className="flex flex-col items-center justify-center p-6 text-center border-b sm:border-b-0 sm:border-r last:border-b-0 last:border-r-0 border-brand-800/60"
+      className="flex flex-col items-center justify-start pt-7 pb-8 px-4 sm:px-6 text-center border-b sm:border-b-0 sm:border-r last:border-b-0 last:border-r-0 border-brand-800/60"
     >
       <div className="font-hero text-6xl sm:text-7xl leading-none font-normal tracking-wide text-gold-500">
         {raw ? current : `${formatNumber(current)}${suffix}`}

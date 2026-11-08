@@ -1,0 +1,89 @@
+flowchart LR
+    %% === PROJECT GOALS ===
+    %% Ultimate Goal: Peluncuran website company profile resmi PT Cakra Indo Yuma yang profesional, performan tinggi (Lighthouse >= 90), dan mudah digunakan untuk pengadaan barang & jasa.
+    %% Current Goal: Finalisasi audit kualitas (SEO, aksesibilitas, testing interaktif) dan persiapan deployment produksi.
+
+    %% === COMPLETED WORK ===
+    %% @project_start [start, closed, 2026-10-22, team]
+    project_start("Inisiasi Proyek Perusahaan<br/><sub>Setup Next.js 16 App Router,<br/>konfigurasi Tailwind CSS v4,<br/>serta arsitektur SSG statis<br/>untuk web PT Cakra Indo Yuma</sub>")
+
+    %% @core_features_impl [ai-task, closed, 2026-10-22, team]
+    core_features_impl("Implementasi Halaman Inti<br/><sub>Pembuatan 5 halaman utama<br/>(Home, Tentang, Layanan, Proyek,<br/>Kontak), struktur data statis,<br/>dan navigasi responsif</sub>")
+
+    %% @branding_visual_identity [ai-task, closed, 2026-10-23, team]
+    branding_visual_identity("Branding & Identitas Visual<br/><sub>Penerapan logo resmi perusahaan,<br/>palet warna brand brown & gold,<br/>migrasi nama brand Alterior,<br/>serta ornamen chevron geometris</sub>")
+
+    %% @portfolio_assets_integration [ai-task, closed, 2026-10-23, team]
+    portfolio_assets_integration("Integrasi Portofolio Proyek<br/><sub>Penyusunan 30 proyek nyata,<br/>integrasi foto aset otentik,<br/>eliminasi duplikasi gambar, dan<br/>kartu arsip tanpa nilai kontrak</sub>")
+
+    %% @content_privacy_refinement [ai-task, closed, 2026-10-24, team]
+    content_privacy_refinement("Perapian Privasi & Profil<br/><sub>Penyelarasan halaman Tentang Kami,<br/>penghapusan ringkasan legalitas<br/>untuk perlindungan data sensitif,<br/>dan pembaruan metadata profil</sub>")
+
+    %% @home_ui_tuning [ai-task, closed, 2026-10-24, team]
+    home_ui_tuning("Penyesuaian UI Beranda<br/><sub>Optimasi Hero full viewport height,<br/>pembersihan badge dan gambar,<br/>perapian vertikal AboutSummary,<br/>serta eliminasi kartu visi</sub>")
+
+    %% @whatsapp_formatting [ai-task, closed, 2026-11-05, team]
+    whatsapp_formatting("Pembaruan Format WhatsApp<br/><sub>Penyempurnaan template pesan<br/>pada generator pesan WhatsApp<br/>di src/lib/whatsapp.ts agar lebih<br/>ringkas dan mudah dibaca admin</sub>")
+
+    %% === FUTURE WORK ===
+    %% @seo_and_a11y_audit [ai-task, opened, 2026-11-05, team]
+    seo_and_a11y_audit("Audit SEO & Aksesibilitas<br/><sub>Pemeriksaan target Lighthouse<br/>(>= 90 mobile, >= 95 a11y & SEO),<br/>validasi WCAG 2.1 AA, kontras,<br/>serta kelengkapan JSON-LD</sub>")
+
+    %% @pdf_compro_download [ai-task, opened, 2026-11-05, team]
+    pdf_compro_download("Fitur Unduh Company Profile<br/><sub>Penyediaan tombol unduh PDF<br/>profil perusahaan publik (P1)<br/>dengan ukuran di bawah 5 MB<br/>tanpa dokumen legalitas mentah</sub>")
+
+    %% @e2e_testing_validation [ai-task, opened, 2026-11-05, team]
+    e2e_testing_validation("Pengujian Interaktif & E2E<br/><sub>Uji coba filter direktori proyek,<br/>validasi formulir kontak Zod,<br/>fungsionalitas Lightbox galeri,<br/>dan konsistensi lintas layar</sub>")
+
+    %% @production_deployment [ai-task, opened, 2026-11-05, team]
+    production_deployment("Penerbitan & Rilis Produksi<br/><sub>Konfigurasi deployment Vercel,<br/>pengaturan custom domain & SSL,<br/>verifikasi build Turbopack, dan<br/>aktivasi analitik web resmi</sub>")
+
+    %% @ultimate_goal [end, opened, 2026-11-05, team]
+    ultimate_goal("Website Resmi Siap Produksi<br/><sub>Website company profile resmi<br/>PT Cakra Indo Yuma siap pakai,<br/>berperforma tinggi, kredibel, dan<br/>mempermudah konversi mitra bisnis</sub>")
+
+    %% === RECENT WORK HIGHLIGHT ===
+    subgraph recent [RECENT]
+        whatsapp_formatting
+    end
+
+    %% === CONNECTIONS ===
+    project_start --> core_features_impl
+    core_features_impl --> branding_visual_identity
+    core_features_impl --> portfolio_assets_integration
+    branding_visual_identity --> home_ui_tuning
+    portfolio_assets_integration --> content_privacy_refinement
+    content_privacy_refinement --> home_ui_tuning
+    home_ui_tuning --> whatsapp_formatting
+
+    %% Parallel future branches
+    whatsapp_formatting --> seo_and_a11y_audit
+    whatsapp_formatting --> pdf_compro_download
+    whatsapp_formatting --> e2e_testing_validation
+
+    %% Path to deployment and goal
+    seo_and_a11y_audit -.-> production_deployment
+    pdf_compro_download -.-> production_deployment
+    e2e_testing_validation -.-> production_deployment
+    production_deployment -.-> ultimate_goal
+
+    %% === STYLES ===
+    %% Closed tasks (soft purple)
+    style project_start fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+    style core_features_impl fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+    style branding_visual_identity fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+    style portfolio_assets_integration fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+    style content_privacy_refinement fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+    style home_ui_tuning fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+
+    %% Recent node (highlighted purple)
+    style whatsapp_formatting fill:#2d1f4e,stroke:#c084fc,color:#e9d5ff,stroke-width:2px
+
+    %% Recent subgraph (dashed border)
+    style recent fill:transparent,stroke:#c084fc,color:#c084fc,stroke-width:2px,stroke-dasharray:5 5
+
+    %% Open tasks (soft green)
+    style seo_and_a11y_audit fill:#1a1a2e,stroke:#4ade80,color:#86efac,stroke-width:1px
+    style pdf_compro_download fill:#1a1a2e,stroke:#4ade80,color:#86efac,stroke-width:1px
+    style e2e_testing_validation fill:#1a1a2e,stroke:#4ade80,color:#86efac,stroke-width:1px
+    style production_deployment fill:#1a1a2e,stroke:#4ade80,color:#86efac,stroke-width:1px
+    style ultimate_goal fill:#1a1a2e,stroke:#4ade80,color:#86efac,stroke-width:1px

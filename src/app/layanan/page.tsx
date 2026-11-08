@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { faqs } from "@/data/faq";
 import { services } from "@/data/services";
 import { workflowSteps } from "@/data/workflow";
-import { Accordion } from "@/components/ui/Accordion";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -43,12 +40,6 @@ const serviceImages: Partial<Record<ServiceSlug, { src: string; alt: string }>> 
 };
 
 export default function LayananPage() {
-  const accordionItems = faqs.map((faq, index) => ({
-    id: `faq-${index}`,
-    question: faq.question,
-    answer: faq.answer,
-  }));
-
   return (
     <div className="bg-cream-50">
       {/* Header Halaman */}
@@ -142,7 +133,11 @@ export default function LayananPage() {
                             alt={image.alt}
                             fill
                             sizes="(max-width: 768px) 100vw, 40vw"
-                            className="object-cover"
+                            className={
+                              image.src.includes("-after.jpg")
+                                ? "object-cover object-bottom scale-[1.14] origin-bottom transition-transform duration-300"
+                                : "object-cover"
+                            }
                           />
                           <span
                             className="absolute inset-x-0 bottom-0 h-1 bg-gold-500"
@@ -232,32 +227,6 @@ export default function LayananPage() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Accordion (PRD L-05) */}
-      <section className="py-16 lg:py-20 bg-cream-50 border-b border-ink-200/60">
-        <div className="container-site max-w-4xl space-y-10">
-          <SectionHeading
-            kicker="Tanya Jawab"
-            title="Pertanyaan yang Sering Diajukan"
-            subtitle="Informasi penting seputar legalitas pengadaan, kustomisasi ukuran mebel, serta mekanisme kerja sama dengan PT Cakra Indo Yuma."
-            align="center"
-          />
-
-          <Accordion items={accordionItems} />
-
-          <div className="text-center pt-4">
-            <p className="text-sm text-ink-600">
-              Ada pertanyaan khusus yang belum tercantum?{" "}
-              <Link
-                href="/kontak"
-                className="font-bold text-brand-700 hover:underline focus-visible:outline-brand-600"
-              >
-                Tanyakan langsung kepada tim kami &rarr;
-              </Link>
-            </p>
           </div>
         </div>
       </section>

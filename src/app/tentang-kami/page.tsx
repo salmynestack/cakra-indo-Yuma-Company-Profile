@@ -73,9 +73,6 @@ export default function TentangKamiPage() {
                   className="object-cover"
                 />
               </div>
-              <p className="mt-2 text-right text-xs text-ink-500 italic">
-                Stok bahan baku kayu jati di workshop Kabupaten Cilacap
-              </p>
             </div>
           </div>
         </div>

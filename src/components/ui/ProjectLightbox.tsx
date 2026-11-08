@@ -42,7 +42,11 @@ export function ProjectLightbox({ images }: ProjectLightboxProps) {
               alt={img.alt}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className={
+                img.src.includes("-after.jpg")
+                  ? "object-cover object-bottom scale-[1.14] origin-bottom transition-transform duration-300 group-hover:scale-[1.20]"
+                  : "object-cover transition-transform duration-300 group-hover:scale-105"
+              }
             />
             <div className="absolute inset-0 bg-ink-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
               <span className="rounded-full bg-white/90 px-3.5 py-1.5 text-xs font-bold text-brand-950 shadow-md">

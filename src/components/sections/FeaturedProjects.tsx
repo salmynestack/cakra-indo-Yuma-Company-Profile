@@ -35,6 +35,7 @@ export function FeaturedProjects() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((project) => {
             const hasDetail = project.hasDetail;
+            const hasAfterBadge = project.cover?.includes("-after");
 
             return (
               <Card
@@ -44,29 +45,21 @@ export function FeaturedProjects() {
               >
                 <div>
                   {/* Gambar Cover */}
-                  <div className="relative aspect-16/10 w-full overflow-hidden bg-cream-100">
+                  <div className="relative aspect-16/10 w-full overflow-hidden bg-white border-b border-ink-100/70">
                     {project.cover ? (
                       <Image
                         src={project.cover}
                         alt={project.title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        className={
+                          hasAfterBadge
+                            ? "object-cover object-bottom scale-[1.14] origin-bottom transition-transform duration-300 group-hover:scale-[1.20]"
+                            : "object-cover transition-transform duration-300 group-hover:scale-105"
+                        }
                       />
                     ) : (
-                      <div className="flex h-full w-full flex-col items-center justify-center p-5 pt-12 bg-white text-center border-b border-ink-100/70 select-none">
-                        <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-cream-100 text-brand-800">
-                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75} aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                          </svg>
-                        </div>
-                        <span className="text-xs font-bold text-brand-950 uppercase tracking-wide">
-                          Dokumentasi Arsip
-                        </span>
-                        <p className="mt-1 text-[11px] text-ink-500 max-w-[210px] leading-relaxed">
-                          Foto pekerjaan tersimpan dalam arsip fisik kontrak resmi perusahaan.
-                        </p>
-                      </div>
+                      <div className="h-full w-full bg-white" />
                     )}
                     <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
                       <Badge variant="brand" size="sm">
