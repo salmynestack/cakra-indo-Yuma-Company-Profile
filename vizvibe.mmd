@@ -25,6 +25,15 @@ flowchart LR
     %% @whatsapp_formatting [ai-task, closed, 2026-11-05, team]
     whatsapp_formatting("Pembaruan Format WhatsApp<br/><sub>Penyempurnaan template pesan<br/>pada generator pesan WhatsApp<br/>di src/lib/whatsapp.ts agar lebih<br/>ringkas dan mudah dibaca admin</sub>")
 
+    %% @project_assets_hygiene [ai-task, closed, 2026-11-07, team]
+    project_assets_hygiene("Higienitas Aset Portofolio<br/><sub>Pembersihan duplikasi loker,<br/>penghapusan cover alat musik,<br/>eliminasi cover zoom pada RDP,<br/>dan konsistensi kartu bersih</sub>")
+
+    %% @text_driven_project_cards [ai-task, closed, 2026-11-07, team]
+    text_driven_project_cards("Redesain Kartu Non-Image<br/><sub>Transformasi kartu proyek ke<br/>format dossier rekam jejak B2B,<br/>menonjolkan instansi, status BAST,<br/>dan link detail spesifikasi</sub>")
+
+    %% @photo_audit_and_copy_cleanup [ai-task, closed, 2026-11-07, team]
+    photo_audit_and_copy_cleanup("Audit Foto & Perapian Teks<br/><sub>Penghapusan teks BAST di kartu,<br/>audit ketat kecocokan foto proyek,<br/>eliminasi foto filler & generic,<br/>dan verifikasi 12 proyek nyata</sub>")
+
     %% === FUTURE WORK ===
     %% @seo_and_a11y_audit [ai-task, opened, 2026-11-05, team]
     seo_and_a11y_audit("Audit SEO & Aksesibilitas<br/><sub>Pemeriksaan target Lighthouse<br/>(>= 90 mobile, >= 95 a11y & SEO),<br/>validasi WCAG 2.1 AA, kontras,<br/>serta kelengkapan JSON-LD</sub>")
@@ -43,7 +52,7 @@ flowchart LR
 
     %% === RECENT WORK HIGHLIGHT ===
     subgraph recent [RECENT]
-        whatsapp_formatting
+        photo_audit_and_copy_cleanup
     end
 
     %% === CONNECTIONS ===
@@ -54,11 +63,14 @@ flowchart LR
     portfolio_assets_integration --> content_privacy_refinement
     content_privacy_refinement --> home_ui_tuning
     home_ui_tuning --> whatsapp_formatting
+    whatsapp_formatting --> project_assets_hygiene
+    project_assets_hygiene --> text_driven_project_cards
+    text_driven_project_cards --> photo_audit_and_copy_cleanup
 
     %% Parallel future branches
-    whatsapp_formatting --> seo_and_a11y_audit
-    whatsapp_formatting --> pdf_compro_download
-    whatsapp_formatting --> e2e_testing_validation
+    photo_audit_and_copy_cleanup --> seo_and_a11y_audit
+    photo_audit_and_copy_cleanup --> pdf_compro_download
+    photo_audit_and_copy_cleanup --> e2e_testing_validation
 
     %% Path to deployment and goal
     seo_and_a11y_audit -.-> production_deployment
@@ -74,9 +86,12 @@ flowchart LR
     style portfolio_assets_integration fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
     style content_privacy_refinement fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
     style home_ui_tuning fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+    style whatsapp_formatting fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+    style project_assets_hygiene fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+    style text_driven_project_cards fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
 
     %% Recent node (highlighted purple)
-    style whatsapp_formatting fill:#2d1f4e,stroke:#c084fc,color:#e9d5ff,stroke-width:2px
+    style photo_audit_and_copy_cleanup fill:#2d1f4e,stroke:#c084fc,color:#e9d5ff,stroke-width:2px
 
     %% Recent subgraph (dashed border)
     style recent fill:transparent,stroke:#c084fc,color:#c084fc,stroke-width:2px,stroke-dasharray:5 5

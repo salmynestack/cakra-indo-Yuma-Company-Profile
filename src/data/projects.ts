@@ -56,10 +56,6 @@ export const projects: Project[] = [
         src: "/images/projects/meja-rapat-oval-executive.jpg",
         alt: "Pengadaan meja rapat oval dan kursi perkuliahan/rapat gedung kampus",
       },
-      {
-        src: "/images/bahan-baku-kayu-jati.jpg",
-        alt: "Penyortiran bahan baku kayu solid berkualitas untuk mebelair institusi pendidikan",
-      },
     ],
   },
   {
@@ -128,19 +124,10 @@ export const projects: Project[] = [
       "Memasok kursi kuliah lipat Brother berkerangka kokoh dengan papan tulis presisi yang dirancang khusus untuk kenyamanan belajar intensif mahasiswa.",
     result:
       "Seluruh unit kursi kuliah terpasang rapi di ruang-ruang kuliah FIB Unsoed dan siap digunakan untuk proses belajar mengajar.",
-    cover: "/images/projects/kursi-kuliah-brother-fib.jpg",
     gallery: [
       {
         src: "/images/projects/kursi-kuliah-brother-fib.jpg",
         alt: "Ratusan unit kursi kuliah Brother terpasang berjajar di ruang kuliah FIB Unsoed",
-      },
-      {
-        src: "/images/projects/kursi-mesh-ergonomis.jpg",
-        alt: "Pemeriksaan unit kursi ergonomis berkerangka kokoh",
-      },
-      {
-        src: "/images/projects/kursi-putar-kerja-kantor.jpg",
-        alt: "Pemeriksaan kualitas rangka dan mekanisme kursi sebelum serah terima",
       },
     ],
   },
@@ -165,7 +152,6 @@ export const projects: Project[] = [
       "Fabrikasi kursi kuliah rangka pipa baja dengan dudukan dan sandaran busa warna cokelat oranye dilapisi kulit sintetis tahan sobek.",
     result:
       "Ruang kuliah FISIP Unsoed kini tampil lebih segar dan nyaman, mendukung proses perkuliahan harian mahasiswa.",
-    cover: "/images/projects/kursi-kuliah-fisip-unsoed.jpg",
     gallery: [
       {
         src: "/images/projects/kursi-kuliah-fisip-unsoed.jpg",
@@ -174,10 +160,6 @@ export const projects: Project[] = [
       {
         src: "/images/projects/kursi-kuliah-unsoed-koleksi.jpg",
         alt: "Koleksi peremajaan kursi kuliah modern Fakultas Ilmu Sosial dan Ilmu Politik",
-      },
-      {
-        src: "/images/projects/produksi-mebel-sekolah.jpg",
-        alt: "Proses perakitan dan inspeksi kekuatan struktur rangka kursi",
       },
     ],
   },
@@ -229,7 +211,7 @@ export const projects: Project[] = [
     year: 2025,
     contractValue: "Rp 655.310.000",
     contractValueNumber: 655310000,
-    hasDetail: true,
+    hasDetail: false,
     featured: false,
     summary:
       "Pengadaan mebel modal APBD melalui e-Katalog LKPP untuk fasilitas kantor dan sarana pelayanan Dinas Kesehatan Kabupaten Bandung.",
@@ -239,21 +221,7 @@ export const projects: Project[] = [
       "Penyediaan mebel kantor ergonomis, meja layanan kayu jati solid berkaca, dan lemari arsip dengan proses administrasi e-Katalog yang akuntabel.",
     result:
       "Seluruh paket belanja modal mebel terverifikasi dan diserahterimakan dengan Berita Acara Serah Terima (BAST) tanpa catatan.",
-    cover: "/images/projects/meja-kerja-kayu-jati.jpg",
-    gallery: [
-      {
-        src: "/images/projects/meja-kerja-kayu-jati.jpg",
-        alt: "Meja kerja kayu jati solid dengan kaca atas dan laci kuncian untuk instansi dinas",
-      },
-      {
-        src: "/images/projects/kursi-putar-kerja-kantor.jpg",
-        alt: "Deretan kursi kerja putar dan kursi rapat staf dinas kesehatan",
-      },
-      {
-        src: "/images/projects/produksi-mebel-sekolah.jpg",
-        alt: "Proses perakitan dan inspeksi kualitas mebel dinas di workshop",
-      },
-    ],
+    gallery: [],
   },
   {
     slug: "kanopi-parkiran-kejaksaan-cilacap",
@@ -276,16 +244,7 @@ export const projects: Project[] = [
       "Penerapan struktur baja berkekuatan tinggi dengan atap kedap panas dan finishing cat pelindung korosi luar ruangan yang tahan cuaca pesisir Cilacap.",
     result:
       "Area parkir Kejaksaan Negeri Cilacap kini terlindung optimal dengan estetika arsitektur yang selaras dengan gedung kantor utama.",
-    gallery: [
-      {
-        src: "/images/workshop-mebel-kayu.jpg",
-        alt: "Persiapan material dan fabrikasi pendukung konstruksi eksterior",
-      },
-      {
-        src: "/images/bahan-baku-kayu-jati.jpg",
-        alt: "Pemeriksaan material struktur dan kelengkapan konstruksi",
-      },
-    ],
+    gallery: [],
   },
   {
     slug: "kursi-kuliah-brother-fib-unsoed-209m",
@@ -317,7 +276,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Fabrikasi dan pemasangan mebel custom khusus yang disesuaikan dengan dimensi ruangan dan estetika Fakultas Ilmu Budaya Unsoed.",
-    cover: "/images/projects/meja-kerja-l-shape.jpg",
     gallery: [],
   },
   {
@@ -334,7 +292,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Penyediaan mebelair dan bangku laboratorium untuk Gedung Teknik Listrik dan Energi Terbarukan IV di kampus Politeknik Negeri Cilacap.",
-    cover: "/images/projects/lemari-loker-besi.jpg",
     gallery: [],
   },
   {
@@ -351,7 +308,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Manajemen acara kedinasan dan koordinasi multi-pihak pengadaan lahan Buffer Zone Pertamina Group di wilayah Kabupaten Cilacap.",
-    cover: "/images/projects/rakor-pertamina-ballroom.jpg",
     gallery: [],
   },
   {
@@ -606,7 +562,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Pekerjaan konstruksi dan pembaruan interior ruang transit kedinasan serta fasilitas rumah dinas Pertamina Sales Area Tegal.",
-    cover: "/images/projects/sofa-meja-kaca-lomanis.jpg",
     gallery: [],
   },
   {
@@ -623,7 +578,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Renovasi ruang kerja dan meja komando kustom fungsi Corporate Secretary, Feedstock, dan Emergency Response di Graha Pertamina.",
-    cover: "/images/projects/meja-rapat-oval-executive.jpg",
     gallery: [],
   },
   {
@@ -704,7 +658,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Pengadaan peralatan olahraga tenis meja, futsal, perlengkapan beladiri, dan cabang menembak untuk Badan Pembina Olahraga (BAPOR) KPI.",
-    cover: "/images/projects/bapor-tenis-meja-futsal.jpg",
     gallery: [],
   },
   {
@@ -721,7 +674,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Pengadaan instrumen musik dan sound equipment pendukung kegiatan kesenian dan pembinaan karyawan di lingkungan RU IV Cilacap.",
-    cover: "/images/projects/bapor-alat-musik-studio.jpg",
     gallery: [],
   },
   {
@@ -738,7 +690,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Pasokan sarana olahraga dan rekreasi meliputi set pancingan, bola sepak standar kompetisi, dan perlengkapan bola voli BAPOR KPI.",
-    cover: "/images/projects/bapor-voli-sepakbola.jpg",
     gallery: [],
   },
   {
@@ -755,7 +706,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Penyediaan perlengkapan olahraga cabang atletik/lari, basket, dan set perlengkapan golf bagi pembinaan kesehatan pekerja kilang.",
-    cover: "/images/projects/bapor-basket-golf-lari.jpg",
     gallery: [],
   },
   {
@@ -772,7 +722,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Penyediaan sarana perlengkapan rekreasi dan kejuaraan antarbagian Badan Pembina Olahraga di PT Kilang Pertamina Internasional.",
-    cover: "/images/projects/bapor-gaple-catur-rekreasi.jpg",
     gallery: [],
   },
 
@@ -800,7 +749,6 @@ export const projects: Project[] = [
       "Menyediakan deretan mebel berkualitas prima, meja workstation modular, lemari arsip kokoh, dan pengecekan BAST komprehensif.",
     result:
       "Seluruh furnitur dan perlengkapan RDP diserahterimakan tepat waktu dalam kondisi sempurna dan siap pakai.",
-    cover: "/images/projects/kursi-direksi-kulit.jpg",
     gallery: [
       {
         src: "/images/projects/meja-rapat-oval-executive.jpg",
@@ -813,10 +761,6 @@ export const projects: Project[] = [
       {
         src: "/images/projects/serah-terima-barang-pertamina.jpg",
         alt: "Pemeriksaan dokumen Berita Acara Serah Terima bersama staf Pertamina",
-      },
-      {
-        src: "/images/projects/sofa-single-eksekutif.jpg",
-        alt: "Sofa single eksekutif dengan bantalan nyaman untuk RDP",
       },
     ],
   },
@@ -850,13 +794,7 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Pengadaan set almari kaca aluminium, meja kerja, dan sofa tamu untuk fasilitas perumahan dinas RU IV Cilacap periode Oktober 2021.",
-    cover: "/images/projects/lemari-kaca-aluminium-kpi.jpg",
-    gallery: [
-      {
-        src: "/images/projects/lemari-kaca-aluminium-kpi.jpg",
-        alt: "Lemari kaca aluminium serbaguna untuk hunian dinas kilang Pertamina",
-      },
-    ],
+    gallery: [],
   },
   {
     slug: "elektronik-rdp-oktober-2021-kpi",
@@ -1080,7 +1018,6 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Penyediaan aneka perlengkapan pendukung operasional Head Office (HO) PT Pertamina (Persero) di Jakarta.",
-    cover: "/images/projects/tempat-sampah-pilah-besi.jpg",
     gallery: [],
   },
   {
@@ -1097,13 +1034,7 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Pengadaan perabotan rak susun kayu rangka besi, meja belajar, dan perabot penunjang perumahan staf kilang Cilacap.",
-    cover: "/images/projects/rak-sepatu-kayu-besi-kpi.jpg",
-    gallery: [
-      {
-        src: "/images/projects/rak-sepatu-kayu-besi-kpi.jpg",
-        alt: "Rak susun kayu rangka besi putih untuk penataan hunian staf RDP",
-      },
-    ],
+    gallery: [],
   },
   {
     slug: "perabot-elektrikal-rdp-kpi",
@@ -1135,12 +1066,7 @@ export const projects: Project[] = [
     hasDetail: false,
     summary:
       "Penyediaan puluhan ribu rim kertas dokumen dinas HVS A4 PaperOne 80 gram untuk kebutuhan cetak laporan tutup tahun 2021.",
-    gallery: [
-      {
-        src: "/images/projects/gudang-kertas-paperone-kpi.jpg",
-        alt: "Tumpukan stok kertas HVS A4 PaperOne di gudang logistik PT Kilang Pertamina Internasional",
-      },
-    ],
+    gallery: [],
   },
 ];
 

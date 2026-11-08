@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, Building2, Calendar, MapPin } from "lucide-react";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
 import { Badge } from "@/components/ui/Badge";
@@ -31,83 +31,109 @@ export function FeaturedProjects() {
           </div>
         </div>
 
-        {/* 3 Kartu Project Unggulan (PRD H-05) */}
+        {/* 3 Kartu Project Unggulan (PRD H-05 - Format Rekam Jejak Non-Image) */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((project) => {
             const hasDetail = project.hasDetail;
-            const hasAfterBadge = project.cover?.includes("-after");
 
             return (
               <Card
                 key={project.slug}
                 hoverEffect
-                className="group flex flex-col justify-between overflow-hidden p-0 border-ink-200 bg-white"
+                className="group relative flex flex-col justify-between overflow-hidden p-0 border border-ink-200/90 bg-white shadow-xs transition-all duration-200 hover:border-brand-400 hover:shadow-lg"
               >
-                <div>
-                  {/* Gambar Cover */}
-                  <div className="relative aspect-16/10 w-full overflow-hidden bg-white border-b border-ink-100/70">
-                    {project.cover ? (
-                      <Image
-                        src={project.cover}
-                        alt={project.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className={
-                          hasAfterBadge
-                            ? "object-cover object-bottom scale-[1.14] origin-bottom transition-transform duration-300 group-hover:scale-[1.20]"
-                            : "object-cover transition-transform duration-300 group-hover:scale-105"
-                        }
-                      />
-                    ) : (
-                      <div className="h-full w-full bg-white" />
-                    )}
-                    <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
-                      <Badge variant="brand" size="sm">
+                {/* Aksen garis atas brand */}
+                <div className="h-2 w-full bg-gradient-to-r from-brand-700 via-gold-500 to-brand-900" />
+
+                {/* Konten Utama Kartu */}
+                <div className="p-7 space-y-4 flex-1 flex flex-col">
+                  {/* Bar Atas: Tipe Klien, Aktivitas, dan Tahun */}
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <Badge variant="brand" size="sm" className="font-semibold text-[11px]">
                         {project.clientType}
                       </Badge>
-                      {project.location && (
-                        <Badge variant="neutral" size="sm">
-                          {project.location}
-                        </Badge>
+                      {project.activityType && (
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-50 border border-amber-200/80 px-2 py-0.5 rounded-full">
+                          {project.activityType}
+                        </span>
                       )}
                     </div>
+                    {project.year && (
+                      <span className="inline-flex items-center gap-1 text-xs font-bold text-ink-600 bg-ink-50 px-2.5 py-0.5 rounded-full border border-ink-200/60 shrink-0">
+                        <Calendar className="h-3 w-3 text-ink-400" aria-hidden="true" />
+                        <span>{project.year}</span>
+                      </span>
+                    )}
                   </div>
 
-                  {/* Konten Kartu */}
-                  <div className="p-6 space-y-3">
-                    <div className="flex flex-wrap gap-1.5">
+                  {/* Judul Proyek & Kategori */}
+                  <div className="space-y-2">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-brand-950 leading-snug group-hover:text-brand-800 transition-colors">
+                      {hasDetail ? (
+                        <Link
+                          href={`/project/${project.slug}`}
+                          className="hover:underline focus:outline-hidden"
+                        >
+                          {project.title}
+                        </Link>
+                      ) : (
+                        project.title
+                      )}
+                    </h3>
+
+                    <div className="flex flex-wrap gap-1">
                       {project.categories.map((cat) => (
                         <span
                           key={cat}
-                          className="text-xs font-semibold text-brand-700 bg-brand-50 px-2 py-0.5 rounded-xs"
+                          className="text-xs font-medium text-brand-800 bg-brand-50/90 px-2 py-0.5 rounded-xs"
                         >
                           {getCategoryTitle(cat)}
                         </span>
                       ))}
                     </div>
-
-                    <h3 className="font-display text-lg font-bold text-brand-950 leading-snug">
-                      {project.title}
-                    </h3>
-
-                    <p className="text-xs font-medium text-ink-500">
-                      Klien: <span className="text-ink-800">{project.client}</span>
-                    </p>
-
-                    <p className="text-sm text-ink-600 line-clamp-3 leading-relaxed">
-                      {project.summary}
-                    </p>
                   </div>
+
+                  {/* Metadata Instansi Klien & Lokasi */}
+                  <div className="pt-3 border-t border-ink-100/90 space-y-2 text-xs text-ink-600">
+                    <div className="flex items-start gap-2 min-w-0">
+                      <Building2 className="h-4 w-4 text-brand-600 shrink-0 mt-0.5" aria-hidden="true" />
+                      <span className="font-medium text-ink-900 leading-tight">
+                        {project.client}
+                      </span>
+                    </div>
+                    {project.location && (
+                      <div className="flex items-center gap-2 text-ink-600">
+                        <MapPin className="h-4 w-4 text-gold-600 shrink-0" aria-hidden="true" />
+                        <span>{project.location}</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Ringkasan Proyek */}
+                  <p className="text-sm text-ink-600 line-clamp-3 leading-relaxed flex-1 pt-1">
+                    {project.summary}
+                  </p>
                 </div>
 
-                <div className="p-6 pt-0 mt-auto border-t border-ink-100 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 text-xs text-ink-500 font-medium">
+                {/* Footer Status & Aksi */}
+                <div className="p-4 px-7 bg-cream-50/60 border-t border-ink-100 flex items-center justify-between gap-3 text-xs">
+                  <div className="flex items-center gap-1.5 text-xs text-ink-600 font-medium">
                     <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
-                    <span>Status: Selesai & Terverifikasi</span>
+                    <span>Status Selesai</span>
                   </div>
-                  {project.year && (
-                    <span className="text-xs font-semibold text-ink-400">
-                      Tahun {project.year}
+
+                  {hasDetail ? (
+                    <Link
+                      href={`/project/${project.slug}`}
+                      className="inline-flex items-center gap-1.5 font-bold text-brand-700 hover:text-brand-900 group-hover:translate-x-0.5 transition-all text-xs"
+                    >
+                      <span>Lihat Detail</span>
+                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    </Link>
+                  ) : (
+                    <span className="text-xs text-ink-400 font-medium select-none">
+                      Arsip Resmi
                     </span>
                   )}
                 </div>
