@@ -34,6 +34,9 @@ flowchart LR
     %% @photo_audit_and_copy_cleanup [ai-task, closed, 2026-11-07, team]
     photo_audit_and_copy_cleanup("Audit Foto & Perapian Teks<br/><sub>Penghapusan teks BAST di kartu,<br/>audit ketat kecocokan foto proyek,<br/>eliminasi foto filler & generic,<br/>dan verifikasi 12 proyek nyata</sub>")
 
+    %% @client_showcase_deployment [ai-task, closed, 2026-11-16, team]
+    client_showcase_deployment("Penyediaan Akses Klien<br/><sub>Aktivasi Cloudflare Quick Tunnel<br/>dengan HTTPS publik tanpa password,<br/>serta sinkronisasi commit ke GitHub<br/>untuk deployment cloud Vercel</sub>")
+
     %% === FUTURE WORK ===
     %% @seo_and_a11y_audit [ai-task, opened, 2026-11-05, team]
     seo_and_a11y_audit("Audit SEO & Aksesibilitas<br/><sub>Pemeriksaan target Lighthouse<br/>(>= 90 mobile, >= 95 a11y & SEO),<br/>validasi WCAG 2.1 AA, kontras,<br/>serta kelengkapan JSON-LD</sub>")
@@ -52,7 +55,7 @@ flowchart LR
 
     %% === RECENT WORK HIGHLIGHT ===
     subgraph recent [RECENT]
-        photo_audit_and_copy_cleanup
+        client_showcase_deployment
     end
 
     %% === CONNECTIONS ===
@@ -66,11 +69,12 @@ flowchart LR
     whatsapp_formatting --> project_assets_hygiene
     project_assets_hygiene --> text_driven_project_cards
     text_driven_project_cards --> photo_audit_and_copy_cleanup
+    photo_audit_and_copy_cleanup --> client_showcase_deployment
 
     %% Parallel future branches
-    photo_audit_and_copy_cleanup --> seo_and_a11y_audit
-    photo_audit_and_copy_cleanup --> pdf_compro_download
-    photo_audit_and_copy_cleanup --> e2e_testing_validation
+    client_showcase_deployment --> seo_and_a11y_audit
+    client_showcase_deployment --> pdf_compro_download
+    client_showcase_deployment --> e2e_testing_validation
 
     %% Path to deployment and goal
     seo_and_a11y_audit -.-> production_deployment
@@ -89,9 +93,10 @@ flowchart LR
     style whatsapp_formatting fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
     style project_assets_hygiene fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
     style text_driven_project_cards fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+    style photo_audit_and_copy_cleanup fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
 
     %% Recent node (highlighted purple)
-    style photo_audit_and_copy_cleanup fill:#2d1f4e,stroke:#c084fc,color:#e9d5ff,stroke-width:2px
+    style client_showcase_deployment fill:#2d1f4e,stroke:#c084fc,color:#e9d5ff,stroke-width:2px
 
     %% Recent subgraph (dashed border)
     style recent fill:transparent,stroke:#c084fc,color:#c084fc,stroke-width:2px,stroke-dasharray:5 5
