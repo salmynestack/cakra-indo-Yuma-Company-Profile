@@ -40,6 +40,9 @@ flowchart LR
     %% @disconnect_public_access [ai-task, closed, 2026-11-16, team]
     disconnect_public_access("Pencabutan Akses Publik<br/><sub>Penonaktifan Cloudflare Tunnel,<br/>penghentian proses server Next.js,<br/>dan pengembalian lingkungan ke<br/>mode privat lokal sepenuhnya</sub>")
 
+    %% @disable_vercel_auto_deploy [ai-task, closed, 2026-11-24, team]
+    disable_vercel_auto_deploy("Blokir Auto-Deploy Vercel<br/><sub>Konfigurasi vercel.json dengan<br/>git.deploymentEnabled: false<br/>serta ignoreCommand exit 0 agar<br/>push tidak membangun ke publik</sub>")
+
     %% === FUTURE WORK ===
     %% @seo_and_a11y_audit [ai-task, opened, 2026-11-05, team]
     seo_and_a11y_audit("Audit SEO & Aksesibilitas<br/><sub>Pemeriksaan target Lighthouse<br/>(>= 90 mobile, >= 95 a11y & SEO),<br/>validasi WCAG 2.1 AA, kontras,<br/>serta kelengkapan JSON-LD</sub>")
@@ -58,7 +61,7 @@ flowchart LR
 
     %% === RECENT WORK HIGHLIGHT ===
     subgraph recent [RECENT]
-        disconnect_public_access
+        disable_vercel_auto_deploy
     end
 
     %% === CONNECTIONS ===
@@ -74,11 +77,12 @@ flowchart LR
     text_driven_project_cards --> photo_audit_and_copy_cleanup
     photo_audit_and_copy_cleanup --> client_showcase_deployment
     client_showcase_deployment --> disconnect_public_access
+    disconnect_public_access --> disable_vercel_auto_deploy
 
     %% Parallel future branches
-    disconnect_public_access --> seo_and_a11y_audit
-    disconnect_public_access --> pdf_compro_download
-    disconnect_public_access --> e2e_testing_validation
+    disable_vercel_auto_deploy --> seo_and_a11y_audit
+    disable_vercel_auto_deploy --> pdf_compro_download
+    disable_vercel_auto_deploy --> e2e_testing_validation
 
     %% Path to deployment and goal
     seo_and_a11y_audit -.-> production_deployment
@@ -99,9 +103,10 @@ flowchart LR
     style text_driven_project_cards fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
     style photo_audit_and_copy_cleanup fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
     style client_showcase_deployment fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
+    style disconnect_public_access fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:1px
 
     %% Recent node (highlighted purple)
-    style disconnect_public_access fill:#2d1f4e,stroke:#c084fc,color:#e9d5ff,stroke-width:2px
+    style disable_vercel_auto_deploy fill:#2d1f4e,stroke:#c084fc,color:#e9d5ff,stroke-width:2px
 
     %% Recent subgraph (dashed border)
     style recent fill:transparent,stroke:#c084fc,color:#c084fc,stroke-width:2px,stroke-dasharray:5 5
